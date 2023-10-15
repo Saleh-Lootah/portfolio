@@ -1,162 +1,425 @@
 :root {
-  /* Font families */
-  --font-fallback: "FreeSans", "Ubuntu", "Courier New", courier, monospace;
-
-  /* Font weights */
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semi-bold: 600;
-  --font-weight-bold: 700;
-
-  /* Font sizes */
-  --font-size-h4: 1rem;
-  --font-size-h3: calc(var(--font-size-h4) + 2px);
-  --font-size-h2: calc(var(--font-size-h3) + 2px);
-  --font-size-h1: calc(var(--font-size-h2) + 4px);
-  --font-size-p1: calc(var(--font-size-h4) - 2px);
-  --font-size-p2: calc(var(--font-size-p1) - 2px);
-  --font-size-p3: calc(var(--font-size-p2) - 2px);
-  --font-size-p4: calc(var(--font-size-p3) - 1px);
-
-  /* Line heights */
-  --line-height-heading: 100%;
-  --line-height-p1: 16px;
-  --line-height-p2: calc(var(--line-height-p1) - 2px);
-  --line-height-p3: calc(var(--line-height-p2) - 2px);
-  --line-height-p4: calc(var(--line-height-p3) - 2px);
-
-  /* Letter spacing */
-  --letter-spacing-paragraph: -0.2pt;
-
-  /* Paragraph spacing */
-  --paragraph-spacing-0: 0;
-
   /* Color spectrum */
-  --white-1000: #FFF;
-  --white-950: rgba(255 255 255 / 95%);
-  --white-900: rgba(255 255 255 / 90%);
-  --white-800: rgba(255 255 255 / 80%);
-  --white-700: rgba(255 255 255 / 70%);
-  --white-600: rgba(255 255 255 / 60%);
-  --white-500: rgba(255 255 255 / 50%);
-  --white-400: rgba(255 255 255 / 40%);
-  --white-300: rgba(255 255 255 / 30%);
-  --white-200: rgba(255 255 255 / 20%);
-  --white-100: rgba(255 255 255 / 10%);
-  --white-50: rgba(255 255 255 / 5%);
+  --non-opaque-white-1000: rgba(255 255 255 / 100%);
+  --non-opaque-white-950: rgba(255 255 255 / 95%);
+  --non-opaque-white-900: rgba(255 255 255 / 90%);
+  --non-opaque-white-800: rgba(255 255 255 / 80%);
+  --non-opaque-white-700: rgba(255 255 255 / 70%);
+  --non-opaque-white-600: rgba(255 255 255 / 60%);
+  --non-opaque-white-500: rgba(255 255 255 / 50%);
+  --non-opaque-white-400: rgba(255 255 255 / 40%);
+  --non-opaque-white-300: rgba(255 255 255 / 30%);
+  --non-opaque-white-200: rgba(255 255 255 / 20%);
+  --non-opaque-white-100: rgba(255 255 255 / 10%);
+  --non-opaque-white-50: rgba(255 255 255 / 5%);
+  --gray-950: rgba(21 21 21 / 100%);
+  --gray-900: rgba(61 61 61 / 100%);
+  --gray-800: rgba(69 69 69 / 100%);
+  --gray-700: rgba(79 79 79 / 100%);
+  --gray-600: rgba(93 93 93 / 100%);
+  --gray-500: rgba(109 109 109 / 100%);
+  --gray-400: rgba(136 136 136 / 100%);
+  --gray-300: rgba(176 176 176 / 100%);
+  --gray-200: rgba(209 209 209 / 100%);
+  --gray-100: rgba(231 231 231 / 100%);
+  --gray-50: rgba(246 246 246 / 100%);
+  --orange-950: rgba(63 18 11 / 100%);
+  --orange-900: rgba(118 42 24 / 100%);
+  --orange-800: rgba(146 48 26 / 100%);
+  --orange-700: rgba(183 59 23 / 100%);
+  --orange-600: rgba(229 84 29 / 100%);
+  --orange-500: rgba(235 104 36 / 100%);
+  --orange-400: rgba(239 136 72 / 100%);
+  --orange-300: rgba(245 178 124 / 100%);
+  --orange-200: rgba(249 210 175 / 100%);
+  --orange-100: rgba(252 235 216 / 100%);
+  --orange-50: rgba(254 246 238 / 100%);
+  --cream-950: rgba(47 35 27 / 100%);
+  --cream-900: rgba(89 68 53 / 100%);
+  --cream-800: rgba(109 83 63 / 100%);
+  --cream-700: rgba(133 101 73 / 100%);
+  --cream-600: rgba(160 124 86 / 100%);
+  --cream-500: rgba(173 142 98 / 100%);
+  --cream-400: rgba(187 163 124 / 100%);
+  --cream-300: rgba(207 193 162 / 100%);
+  --cream-200: rgba(226 218 198 / 100%);
+  --cream-100: rgba(243 240 231 / 100%);
+  --cream-50: rgba(249 247 243 / 100%);
 
+  --surface-level-1: var(--gray-100);
+  --surface-level-2: var(--gray-50);
+  --surface-level-3: #F5F5F5;
+  --surface-frosted-glass: rgba(255 255 255 / 1%);
 
-  --surface: #F3F0E7;
-  --primary: #E5541D;
-  --secondary: #F9D5C8;
-  --on-primary: var(--surface);
-  --on-secondary: #383838;
-  --on-surface: #383838;
-  --frosted-glass: var(--white-100);
+  --primary: var(--cream-950);
+  --secondary: var(--cream-900);
+  --on-primary: var(--cream-200);
+  --on-secondary: var(--cream-100);
 
+  --state-primary-default: var(--cream-950);
+  --state-primary-hover: var(--cream-700);
+  --state-primary-active: var(--cream-900);
+
+  --on-state-primary-default: var(--cream-200);
+  --on-state-primary-hover: var(--cream-200);
+  --on-state-primary-active: var(--cream-200);
+
+  /* Font families */
+  --font-fallback: "FreeSans",
+    "Ubuntu",
+    "Courier New",
+    courier,
+    monospace;
+
+  /* Base Font Size */
+  --font-size-base: 1rem;
+
+  /* Font Sizes with Multiplier */
+  --font-size-small: calc(var(--font-size-base) * 0.875);
+  /* 14px */
+  --font-size-h4: calc(var(--font-size-base) * 1.625);
+  /* 26px */
+  --font-size-h3: calc(var(--font-size-base) * 1.875);
+  /* 30px */
+  --font-size-h2: calc(var(--font-size-base) * 2.25);
+  /* 36px */
+  --font-size-h1: calc(var(--font-size-base) * 2.75);
+  /* 44px */
+
+  /* Font Weights */
+  --font-weight-regular: medium;
+  --font-weight-bold: bold;
+
+  /* Line Heights */
+  --line-height-heading: 80%;
+  --line-height-paragraph: 150%;
+
+  /* Letter Spacing */
+  --letter-spacing-heading: -4%;
+  --letter-spacing-paragraph: -2%;
+
+  /* Paragraph Styles */
+  --paragraph-spacing: 0;
+  --paragraph-indent: 0px;
+
+  /* Text Styles */
+  --text-case: none;
+  --text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+
+  /* Styles for dark mode go here */
+  :root {
+    --surface-level-1: var(--gray-950);
+    --surface-level-2: #121212;
+    --surface-level-3: #0A0A0A;
+    --surface-frosted-glass: rgba(0 0 0 / 1%);
+
+    --primary: var(--cream-200);
+    --secondary: var(--cream-100);
+    --on-primary: var(--cream-950);
+    --on-secondary: var(--cream-900);
+
+    --state-primary-default: var(--cream-200);
+    --state-primary-hover: var(--cream-300);
+    --state-primary-active: var(--cream-400);
+    --on-state-primary-default: var(--cream-950);
+    --on-state-primary-hover: var(--cream-950);
+    --on-state-primary-active: var(--cream-950);
+  }
+}
+
+/* Reset margin, padding, and border for all elements */
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: var(--font-fallback);
-  font-weight: var(--font-weight-regular);
-  background: var(--surface);
-  color: var(--primary);
+/* Use a better box model */
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  /* IE */
+  -webkit-text-size-adjust: 100%;
+  /* Safari */
 }
 
+/* Set base font settings */
+body {
+  font-family: var(--font-fallback);
+  background: var(--surface-level-1);
+  color: var(--primary);
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Normalize list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  background-color: var(--state-primary-hover);
+  color: var(--on-state-primary-hover);
+}
+
+a:active {
+  background-color: var(--state-primary-active);
+  color: var(--on-state-primary-active);
+}
+
+/* Ensure that all elements respond to focus */
+*:focus {
+  outline: none;
+}
+
+/* More legible typography for code */
+code,
+pre {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+/* Forms */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+}
+
+/* Change the background color of the highlighted text and the color of the text itself */
+::selection {
+  background-color: var(--cream-800);
+  color: var(--cream-200);
+}
+
+/* For browser compatibility, you might also want to include the following for Mozilla-based browsers */
+::-moz-selection {
+  background-color: var(--cream-800);
+  color: var(--cream-200);
+}
+
+.nodrag {
+  -webkit-user-drag: none;
+  /* Standard */
+  -webkit-user-select: none;
+  /* Chrome, Safari, Edge */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Standard */
+}
+
+/* Heading Styles */
 h1,
 h2,
 h3,
-h4,
-h5 {
+h4 {
   font-family: var(--font-fallback);
   font-weight: var(--font-weight-bold);
-  margin: 0;
-  line-height: 75%;
-}
-
-html {
-  font-size: 100%;
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
+  margin-top: var(--paragraph-spacing);
+  margin-bottom: var(--paragraph-spacing);
+  text-transform: var(--text-case);
+  text-decoration: var(--text-decoration);
 }
 
 h1 {
-  font-size: 22rem;
-  letter-spacing: -20pt;
+  font-size: var(--font-size-h1);
 }
 
 h2 {
-  font-size: 10rem;
-  letter-spacing: -6pt;
+  font-size: var(--font-size-h2);
 }
 
 h3 {
-  font-size: 6rem;
+  font-size: var(--font-size-h3);
 }
 
 h4 {
-  font-size: 4rem;
+  font-size: var(--font-size-h4);
 }
 
-h5 {
-  font-size: 2rem;
+/* Paragraph Styles */
+p.regular,
+p.bold,
+.small.regular,
+.small.bold {
+  font-family: var(--font-fallback);
+  line-height: var(--line-height-paragraph);
+  letter-spacing: var(--letter-spacing-paragraph);
+  margin-top: var(--paragraph-spacing);
+  margin-bottom: var(--paragraph-spacing);
+  text-indent: var(--paragraph-indent);
+  text-transform: var(--text-case);
+  text-decoration: var(--text-decoration);
 }
 
-p {
-  font-size: 1.5rem;
+p.regular,
+.small.regular {
+  font-weight: var(--font-weight-regular);
 }
 
-small {
-  font-size: 0.618rem;
+p.bold,
+.small.bold {
+  font-weight: var(--font-weight-bold);
 }
 
-.landing-page {
+p,
+p.regular,
+p.bold {
+  font-size: var(--font-size-base);
+}
+
+.small.regular,
+.small.bold {
+  font-size: var(--font-size-small);
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 2rem;
+}
+
+.frosted-glass {
+  background: var(--surface-frosted-glass);
+  backdrop-filter: blur(12px);
+}
+
+/* Default styles (Mobile First) */
+.container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding-left: 6rem;
-  justify-content: center;
-  height: 100vh;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.landing-page hr {
-  align-items: flex-start;
+hr {
   border: none;
-  width: 100%;
-  height: 1rem;
+  /* Removes default borders */
+  height: 1px;
+  /* Specifies the height of the line */
   background-color: var(--primary);
+  /* Specifies the color of the line */
+  margin: 10px 0;
+  /* Adds some vertical spacing before and after the line */
+}
+
+
+section {
+  margin-top: 1rem;
 }
 
 nav {
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
-  gap: 1rem;
-  flex-wrap: nowrap;
-  overflow: visible;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 0.25px solid var(--primary);
 }
 
-nav h2 a {
-  text-decoration: none;
-  color: var(--on-primary)
-}
-
-nav h2 a:hover {
-  padding: 3rem;
-  border-radius: 2rem;
-  background-color: var(--primary);
-  color: var(--on-primary);
-  text-decoration: none;
-  padding: 3rem;
-  border-radius: 2rem;
+.nav-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 
 
-nav h2 a:visited {
-  color: var(--on-primary)
+/* SM devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+    /* Bootstrap's default container width for SM */
+  }
+}
+
+/* MD devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    /* Bootstrap's default container width for MD */
+  }
+}
+
+/* LG devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  :root {
+    --font-size-base: 1.25rem;
+  }
+
+  .container {
+    max-width: 960px;
+    /* Bootstrap's default container width for LG */
+  }
+}
+
+/* XL devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  :root {
+    --font-size-base: 1.5rem;
+  }
+
+  .container {
+    max-width: 1140px;
+    /* Bootstrap's default container width for XL */
+  }
+}
+
+/* XXL devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  :root {
+    --font-size-base: 1.5rem;
+  }
+
+  .container {
+    max-width: 1320px;
+    /* This is a custom width, since Bootstrap 4 doesn't have XXL */
+  }
 }
