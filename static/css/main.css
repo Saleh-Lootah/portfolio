@@ -64,6 +64,9 @@
   --on-state-primary-hover: var(--cream-200);
   --on-state-primary-active: var(--cream-200);
 
+  --separator: var(--cream-200);
+
+
   /* Font families */
   --font-fallback: "FreeSans",
     "Ubuntu",
@@ -95,8 +98,8 @@
   --line-height-paragraph: 150%;
 
   /* Letter Spacing */
-  --letter-spacing-heading: -4%;
-  --letter-spacing-paragraph: -2%;
+  --letter-spacing-heading: -2px;
+  --letter-spacing-paragraph: 0px;
 
   /* Paragraph Styles */
   --paragraph-spacing: 0;
@@ -127,6 +130,9 @@
     --on-state-primary-default: var(--cream-950);
     --on-state-primary-hover: var(--cream-950);
     --on-state-primary-active: var(--cream-950);
+
+    --separator: var(--cream-900);
+
   }
 }
 
@@ -239,7 +245,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font-fallback);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-heading);
   letter-spacing: var(--letter-spacing-heading);
   margin-top: var(--paragraph-spacing);
@@ -264,7 +270,13 @@ h4 {
   font-size: var(--font-size-h4);
 }
 
+h1.xxl {
+  font-weight: var(--font-weight-regular);
+  font-size: 4rem;
+}
+
 /* Paragraph Styles */
+p,
 p.regular,
 p.bold,
 .small.regular,
@@ -300,10 +312,11 @@ p.bold {
   font-size: var(--font-size-small);
 }
 
+
 hr {
   border: none;
   /* Removes default borders */
-  height: 1px;
+  height: 0.5px;
   /* Specifies the height of the line */
   background-color: var(--primary);
   /* Specifies the color of the line */
@@ -321,7 +334,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 1rem;
-  border-bottom: 0.25px solid var(--primary);
+  border-bottom: 1px solid var(--primary);
 }
 
 .mb-1 {
@@ -334,6 +347,26 @@ nav {
 
 .mb-3 {
   margin-bottom: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 6rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 1.5rem;
+}
+
+.mt-3 {
+  margin-top: 2rem;
+}
+
+.mt-4 {
+  margin-top: 6rem;
 }
 
 .nodrag {
@@ -373,6 +406,14 @@ nav {
   padding: 2rem;
 }
 
+.chillin {
+  position: absolute;
+  right: 0;
+  bottom: -63%;
+  max-width: 57px;
+  height: auto;
+}
+
 /* SM devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {
@@ -395,6 +436,11 @@ nav {
     --font-size-base: 1.25rem;
   }
 
+  h1.xxl {
+    font-weight: var(--font-weight-regular);
+    font-size: 8rem;
+  }
+
   .container {
     max-width: 960px;
     /* Bootstrap's default container width for LG */
@@ -405,6 +451,11 @@ nav {
 @media (min-width: 1200px) {
   :root {
     --font-size-base: 1.5rem;
+  }
+
+  h1.xxl {
+    font-weight: var(--font-weight-regular);
+    font-size: 12rem;
   }
 
   .container {
@@ -419,8 +470,14 @@ nav {
     --font-size-base: 1.5rem;
   }
 
+  h1.xxl {
+    font-weight: var(--font-weight-regular);
+    font-size: 10rem;
+    letter-spacing: -8%;
+  }
+
   .container {
-    max-width: 1320px;
+    max-width: 1600px;
     /* This is a custom width, since Bootstrap 4 doesn't have XXL */
   }
 }
