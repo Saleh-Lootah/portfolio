@@ -1,3 +1,11 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://saleh.land/'
 languageCode = 'en-us'
 title = 'Saleh Land'
+
+[Params]
+	name = "Saleh Lootah"
+[minify]
+	minifyOutput = true
+
+[taxonomies]
+    location = "location"

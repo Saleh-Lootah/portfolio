@@ -324,6 +324,11 @@ hr {
   /* Adds some vertical spacing before and after the line */
 }
 
+footer {
+  background-color: var(--on-primary);
+  color: var(--primary);
+}
+
 section {
   margin-top: 1rem;
 }

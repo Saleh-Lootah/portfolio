@@ -1,0 +1,12 @@
+public/
+*.log
+*.iso*
+*.bz2
+*.lock
+content/gallery/*/
+layouts/partials/webring-out.html
+layouts/partials/webring-out.html
+Makefile
+feeds/
+static/sfeed.html
+*\~
