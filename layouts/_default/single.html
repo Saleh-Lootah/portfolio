@@ -1,17 +1,9 @@
 {{ partial "header.html" . }}
 <div class="container">
   {{ partial "nav-bar.html" .}}
-  <div class="main-content">
+  <div class="main-content single">
     <section>
-      <h1 class="xxl">I'm Saleh,<br> a digital designer based in Dubai</h1>
-      <hr>
-    </section>
-    <section>
-      <h2>About</h2>
-      <p>Lorem ipsum dolor sit amet consectetur. Ultricies enim mi sagittis ut cursus rutrum nulla id quis. Ut sodales
-        laoreet eget lacus tortor vitae semper rhoncus. Mattis faucibus volutpat in est magna nulla egestas mauris.
-        Fringilla diam sed adipiscing non at. Interdum blandit non pharetra posuere turpis quam quisque bibendum.Lorem
-      </p>
+      {{.Content}}
     </section>
   </div>
 </div>

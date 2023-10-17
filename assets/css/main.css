@@ -78,16 +78,13 @@
   --font-size-base: 1rem;
 
   /* Font Sizes with Multiplier */
-  --font-size-small: calc(var(--font-size-base) * 0.875);
-  /* 14px */
-  --font-size-h4: calc(var(--font-size-base) * 1.625);
-  /* 26px */
-  --font-size-h3: calc(var(--font-size-base) * 1.875);
-  /* 30px */
-  --font-size-h2: calc(var(--font-size-base) * 2.25);
-  /* 36px */
-  --font-size-h1: calc(var(--font-size-base) * 2.75);
-  /* 44px */
+  --font-size-small: calc(var(--font-size-base) * 0.7);
+  --font-size-h6: calc(var(--font-size-base) * 1.25);
+  --font-size-h5: calc(var(--font-size-h6) * 1.25);
+  --font-size-h4: calc(var(--font-size-h5) * 1.25);
+  --font-size-h3: calc(var(--font-size-h4) * 1.25);
+  --font-size-h2: calc(var(--font-size-h3) * 1.25);
+  --font-size-h1: calc(var(--font-size-h2) * 1.25);
 
   /* Font Weights */
   --font-weight-regular: medium;
@@ -243,7 +240,9 @@ select {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-family: var(--font-fallback);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-heading);
@@ -270,63 +269,59 @@ h4 {
   font-size: var(--font-size-h4);
 }
 
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+}
+
 h1.xxl {
   font-weight: var(--font-weight-regular);
   font-size: 4rem;
 }
 
 /* Paragraph Styles */
-p,
-p.regular,
-p.bold,
-.small.regular,
-.small.bold {
+p {
   font-family: var(--font-fallback);
   line-height: var(--line-height-paragraph);
   letter-spacing: var(--letter-spacing-paragraph);
   margin-top: var(--paragraph-spacing);
-  margin-bottom: var(--paragraph-spacing);
+  margin-bottom: 1rem;
   text-indent: var(--paragraph-indent);
   text-transform: var(--text-case);
   text-decoration: var(--text-decoration);
 }
 
-p.regular,
-.small.regular {
-  font-weight: var(--font-weight-regular);
-}
-
-p.bold,
-.small.bold {
-  font-weight: var(--font-weight-bold);
-}
-
 p,
-p.regular,
-p.bold {
+p.small {
   font-size: var(--font-size-base);
 }
 
-.small.regular,
-.small.bold {
+p.small {
   font-size: var(--font-size-small);
+  margin-bottom: var(--paragraph-spacing);
 }
-
 
 hr {
   border: none;
   /* Removes default borders */
-  height: 0.5px;
+  height: 1px;
   /* Specifies the height of the line */
   background-color: var(--primary);
   /* Specifies the color of the line */
-  margin: 10px 0;
+  margin: 3.5rem 0;
   /* Adds some vertical spacing before and after the line */
 }
 
 footer {
-  background-color: var(--on-primary);
-  color: var(--primary);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  padding: 1rem 4rem;
 }
 
 section {
@@ -334,44 +329,15 @@ section {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  height: 64px;
   top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid var(--primary);
-}
-
-.mb-1 {
-  margin-bottom: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 1.5rem;
-}
-
-.mb-3 {
-  margin-bottom: 2rem;
-}
-
-.mb-4 {
-  margin-bottom: 6rem;
-}
-
-.mt-1 {
-  margin-top: 1rem;
-}
-
-.mt-2 {
-  margin-top: 1.5rem;
-}
-
-.mt-3 {
-  margin-top: 2rem;
-}
-
-.mt-4 {
-  margin-top: 6rem;
 }
 
 .nodrag {
@@ -398,6 +364,7 @@ nav {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 4rem;
 }
 
 .nav-links {
@@ -409,14 +376,26 @@ nav {
 
 .main-content {
   padding: 2rem;
+  min-height: 93.4svh;
+}
+
+.main-content.single {
+  padding: 2rem;
+  min-height: 93.4svh;
+  border: 1px solid var(--primary);
+  border-top: 0px;
 }
 
 .chillin {
   position: absolute;
-  right: 0;
+  right: 1rem;
   bottom: -63%;
   max-width: 57px;
   height: auto;
+}
+
+.breadcrumb {
+  color: var(--gray-900);
 }
 
 /* SM devices (landscape phones, 576px and up) */
@@ -460,7 +439,7 @@ nav {
 
   h1.xxl {
     font-weight: var(--font-weight-regular);
-    font-size: 12rem;
+    font-size: 9rem;
   }
 
   .container {
@@ -478,7 +457,7 @@ nav {
   h1.xxl {
     font-weight: var(--font-weight-regular);
     font-size: 10rem;
-    letter-spacing: -8%;
+    letter-spacing: -4px;
   }
 
   .container {

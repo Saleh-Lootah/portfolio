@@ -1,5 +1,11 @@
 <footer>
-
+    {{if $.GitInfo}}<p>Current page revision:
+        <a href="#">{{
+            $.GitInfo.AbbreviatedHash }}</a>
+    </p>{{end}}
+    <p class="small">The content of this site is CC BY-SA 4.0. The code of this site
+        is BSD 2-Clause.</p>
+    <p class="small"><a href="#">View license file</a></p>
 </footer>
 
 </body>

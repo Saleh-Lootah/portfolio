@@ -1,6 +1,7 @@
 baseURL = 'https://saleh.land/'
 languageCode = 'en-us'
 title = 'Saleh Land'
+enableGitInfo = true
 
 [Params]
 	name = "Saleh Lootah"
