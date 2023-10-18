@@ -1,12 +1,9 @@
-baseURL = 'https://saleh.land/'
+baseURL = 'https://saleh-lootah.com/'
 languageCode = 'en-us'
-title = 'Saleh Land'
+title = 'Saleh Lootah'
 enableGitInfo = true
 
 [Params]
 	name = "Saleh Lootah"
 [minify]
 	minifyOutput = true
-
-[taxonomies]
-    location = "location"
