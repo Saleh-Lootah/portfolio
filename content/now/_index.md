@@ -6,3 +6,5 @@ url: /now
 
 *This is a [now page](https://nownownow.com/about), which is where I write a
 summary of what I am doing right now.*
+
+So what am I doing? I am currently conscripted in the military and have been since Feburary of 2023.

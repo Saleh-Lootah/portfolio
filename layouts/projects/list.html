@@ -1,9 +1,8 @@
 {{ partial "header.html" . }}
-
 <div class="container">
     {{partial "nav-bar.html" }}
     <div class="main-content">
-        {{if not .IsHome }}<h2>{{ .Title }}</h2>{{end}}
+        {{if not .IsHome }}<h3>{{ .Title }}</h3>{{end}}
         {{ .Content }}
         {{ range .Data.Pages }}
         <div class="entry project"><a href="{{ .Permalink }}">{{ .Title }}</a>

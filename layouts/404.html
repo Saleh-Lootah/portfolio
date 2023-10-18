@@ -1,9 +1,30 @@
 {{ partial "header.html" . }}
-<section>
-    <h2>404: Page not found</h2>
-    <p>The page that you are visiting does not exist. Please contact me if you
-        feel like this is an error, or a (broken) link on this site took you
-        here.</p>
-    <p><a href="/">Back to home</a></p>
+<section class="container">
+    <div class="no-page-found">
+        {{ partial "nav-bar.html" . }}
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <svg width="75" height="226" viewBox="0 0 75 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M74.2 7C50.3137 7.00004 27.825 8.09655 27.825 34.4138V83.7586C26.5883 93.5057 19.292 113 0 113C19.292 113 26.5883 132.494 27.825 142.241V191.586C27.825 217.903 49.8055 219 74.2 219"
+                    stroke="#E2DAC6" stroke-width="8" />
+            </svg>
+
+
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <h1 class="xxl"><strong>404</strong><br>
+                </h1>
+                <h4>page not found</h4>
+            </div>
+
+            <svg width="75" height="220" viewBox="0 0 75 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.800017 4C24.6863 4.00004 47.175 5.09655 47.175 31.4138V80.7586C48.4117 90.5057 55.708 110 75 110C55.708 110 48.4117 129.494 47.175 139.241V188.586C47.175 214.903 25.1945 216 0.800017 216"
+                    stroke="#E2DAC6" stroke-width="8" />
+            </svg>
+
+
+        </div>
+    </div>
 </section>
-{{ partial "footer.html" . }}
