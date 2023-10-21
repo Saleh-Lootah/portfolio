@@ -1,11 +1,11 @@
 {{ partial "header.html" . }}
 <div class="container">
     {{ partial "nav-bar.html" .}}
-    <section class="content">
+    <div class="content">
         <h4><span class="breadcrumb"><a href="/blog">Blogs</a></span> &middot; {{ .Title }}</h4>
         <section>
             {{.Content}}
         </section>
-    </section>
+    </div>
     {{ partial "footer.html" . }}
 </div>

@@ -1,14 +1,14 @@
 ---
 title: "Home"
-description: "Uuuuhhhh"
+description: "Home Page Content"
 menu: projects
 ---
 ___
 
-##### About me
+## About me
 
 I like to build and code. In the past I have delved into photography, tried my hand at metal fabrication and a tiny bit of wood working. As of late, my main focus has been the web.
 
-I appreciate the intricacies of visiual design, interaction design and code, and while I believe that they are fundamental to the end result of a project, I have come to
+I obsesses over the intricacies of visual design, interaction design and code, and while I embrace the fact that these factors hold significant weight in dictating the overall quality of the final design, I know that successful designs encompass much more than that. Successful designs are the result of well managed cross-discipline collaboration, where the less tangible aspects of the design process really come to light. I have come to appreciate the importance of diagramming and writing as crucial building blocks of the design process.
 
-I graduated from the University of Exeter with a BSc in Computer Science in 2021 and started working at Digital Dubai as a UI/UX Designer.
+You can contact me on [LinkedIn](https://www.linkedin.com/in/saleh-lootah/) or [email](saleh.lootah3@gmail.com).

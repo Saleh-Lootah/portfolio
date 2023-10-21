@@ -93,7 +93,7 @@
   --font-weight-bold: bold;
 
   /* Line Heights */
-  --line-height-heading: 90%;
+  --line-height-heading: 100%;
   --line-height-paragraph: 150%;
 
   /* Letter Spacing */
@@ -107,6 +107,7 @@
   /* Text Styles */
   --text-case: none;
   --text-decoration: none;
+  font-size: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -133,6 +134,7 @@
     --separator: var(--cream-900);
 
   }
+
 }
 
 /* Reset margin, padding, and border for all elements */
@@ -152,6 +154,7 @@ html {
   /* IE */
   -webkit-text-size-adjust: 100%;
   /* Safari */
+
 }
 
 /* Set base font settings */
@@ -159,7 +162,6 @@ body {
   font-family: var(--font-fallback);
   background: var(--surface-level-1);
   color: var(--primary);
-  font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -181,6 +183,7 @@ ol {
 a {
   text-decoration: underline;
   color: var(--secondary);
+  padding: 0.15rem;
 }
 
 a:hover {
@@ -262,40 +265,38 @@ h6 {
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
   letter-spacing: var(--letter-spacing-heading);
-  margin-top: 1em;
+  margin-top: 0.5em;
   margin-bottom: 1rem;
-  text-transform: var(--text-case);
-  text-decoration: var(--text-decoration);
-}
-
-h1 {
-  font-size: var(--font-size-h1);
-}
-
-h2 {
-  font-size: var(--font-size-h2);
-}
-
-h3 {
-  font-size: var(--font-size-h3);
-}
-
-h4 {
-  font-size: var(--font-size-h4);
-}
-
-h5 {
-  font-size: var(--font-size-h5);
-}
-
-h6 {
-  font-size: var(--font-size-h6);
 }
 
 h1.xxl {
   font-weight: var(--font-weight-regular);
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin-top: 1rem;
+}
+
+h1 {
+  font-size: 3.053rem;
+}
+
+h2 {
+  font-size: 2.442rem;
+}
+
+h3 {
+  font-size: 1.954rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.250rem;
+}
+
+h6 {
+  font-size: 1rem;
 }
 
 /* Paragraph Styles */
@@ -307,11 +308,6 @@ p {
   text-indent: var(--paragraph-indent);
   text-transform: var(--text-case);
   text-decoration: var(--text-decoration);
-}
-
-p,
-p.small {
-  font-size: var(--font-size-base);
 }
 
 p.small {
@@ -360,25 +356,29 @@ hr {
   margin-left: auto;
 }
 
-footer {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: var(--surface-frosted-glass);
-  color: var(--primary);
-  padding: 1rem 4rem;
-  text-align: center;
+section p {
+  margin-bottom: 2rem;
 }
 
-footer.overline {
-  position: absolute;
-  border: 1px solid var(--primary);
-  border-radius: 2rem;
-  height: 1.2rem;
-  mask-image: linear-gradient(#000 50%, transparent 0);
-  pointer-events: none;
+footer {
   width: 100%;
-  z-index: 0;
+  color: var(--primary);
+  text-align: center;
+  overflow: visible;
+  padding: 0 0 2rem 0;
+}
+
+footer .overline {
+  -webkit-mask-image: linear-gradient(transparent 50%, #000 0);
+  mask-image: linear-gradient(transparent 50%, #000 0);
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--primary);
+  border-radius: 1.2rem;
+  height: 1.2rem;
+  pointer-events: none;
+  z-index: 1;
+  margin-bottom: 1rem;
 }
 
 header {
@@ -423,7 +423,7 @@ nav {
 }
 
 .content {
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   min-height: 100svh;
 }
 
@@ -450,16 +450,21 @@ nav {
 
 /* MD devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  h1.xxl {
+    font-size: 6rem;
+  }
+
   .container {
     max-width: 720px;
     /* Bootstrap's default container width for MD */
   }
+
 }
 
 /* LG devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   :root {
-    --font-size-base: 1.25rem;
+    font-size: 110%;
   }
 
   h1.xxl {
@@ -474,33 +479,15 @@ nav {
 
 /* XL devices (desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  :root {
-    --font-size-base: 1.5rem;
-  }
-
   h1.xxl {
-    font-size: 9rem;
-  }
-
-  .container {
-    max-width: 872px;
-    /* Bootstrap's default container width for XL */
+    font-size: 8rem;
+    letter-spacing: -4px;
   }
 }
 
 /* XXL devices (large desktops, 1400px and up) */
 @media (min-width: 1400px) {
   :root {
-    --font-size-base: 1.5rem;
-  }
-
-  h1.xxl {
-    font-size: 10rem;
-    letter-spacing: -4px;
-  }
-
-  .container {
-    max-width: 872px;
-    /* This is a custom width, since Bootstrap 4 doesn't have XXL */
+    font-size: 115%;
   }
 }
