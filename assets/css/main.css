@@ -262,7 +262,7 @@ h6 {
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
   letter-spacing: var(--letter-spacing-heading);
-  margin-top: 1rem;
+  margin-top: 1em;
   margin-bottom: 1rem;
   text-transform: var(--text-case);
   text-decoration: var(--text-decoration);
@@ -295,6 +295,7 @@ h6 {
 h1.xxl {
   font-weight: var(--font-weight-regular);
   font-size: 4rem;
+  margin-top: 1rem;
 }
 
 /* Paragraph Styles */
@@ -329,33 +330,6 @@ hr {
   /* Adds some vertical spacing before and after the line */
 }
 
-footer {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: var(--primary);
-  color: var(--on-primary);
-  padding: 1rem 4rem;
-  text-align: center;
-}
-
-section {
-  margin-top: 1rem;
-}
-
-nav {
-  position: fixed;
-  width: 100%;
-  height: 64px;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid var(--primary);
-  text-decoration: none;
-}
-
 .nodrag {
   -webkit-user-drag: none;
   /* Standard */
@@ -370,8 +344,12 @@ nav {
 }
 
 .frosted-glass {
+  --blur-height: calc(4.5rem*1.3461);
   background: var(--surface-frosted-glass);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
+  height: 4.5rem;
+  left: 0;
 }
 
 /* Default styles (Mobile First) */
@@ -380,7 +358,53 @@ nav {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 4rem;
+}
+
+footer {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--surface-frosted-glass);
+  color: var(--primary);
+  padding: 1rem 4rem;
+  text-align: center;
+}
+
+footer.overline {
+  position: absolute;
+  border: 1px solid var(--primary);
+  border-radius: 2rem;
+  height: 1.2rem;
+  mask-image: linear-gradient(#000 50%, transparent 0);
+  pointer-events: none;
+  width: 100%;
+  z-index: 0;
+}
+
+header {
+  position: sticky;
+  height: 64px;
+  top: 0;
+}
+
+header .underline {
+  position: absolute;
+  border: 1px solid var(--primary);
+  border-radius: 2rem;
+  height: 1.2rem;
+  mask-image: linear-gradient(#000 50%, transparent 0);
+  pointer-events: none;
+  width: 100%;
+  z-index: 0;
+}
+
+nav {
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -398,24 +422,18 @@ nav {
   min-height: 90svh;
 }
 
-.main-content {
+.content {
   padding: 2rem;
   min-height: 100svh;
-}
-
-.main-content.single {
-  padding: 2rem;
-  min-height: 100svh;
-  border: 1px solid var(--primary);
-  border-top: 0px;
 }
 
 .chillin {
   position: absolute;
   right: 1rem;
-  transform: translateY(36%);
   max-width: 57px;
   height: auto;
+  transform: translateY(-48%);
+  z-index: 2;
 }
 
 .breadcrumb {
@@ -445,12 +463,11 @@ nav {
   }
 
   h1.xxl {
-    font-weight: var(--font-weight-regular);
     font-size: 8rem;
   }
 
   .container {
-    max-width: 960px;
+    max-width: 872px;
     /* Bootstrap's default container width for LG */
   }
 }
@@ -462,12 +479,11 @@ nav {
   }
 
   h1.xxl {
-    font-weight: var(--font-weight-regular);
     font-size: 9rem;
   }
 
   .container {
-    max-width: 1140px;
+    max-width: 872px;
     /* Bootstrap's default container width for XL */
   }
 }
@@ -479,13 +495,12 @@ nav {
   }
 
   h1.xxl {
-    font-weight: var(--font-weight-regular);
     font-size: 10rem;
     letter-spacing: -4px;
   }
 
   .container {
-    max-width: 1600px;
+    max-width: 872px;
     /* This is a custom width, since Bootstrap 4 doesn't have XXL */
   }
 }
