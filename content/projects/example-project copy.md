@@ -1,7 +1,8 @@
 ---
-title: Example 2
+title: Examplesad
 date: 2023-10-17
-url: /exampleProject
+description: "This is a sample"
+url: /exampleSad
 aliases:
   - "/projects/example"
 ---

@@ -1,19 +1,20 @@
 {{ partial "header.html" . }}
 <div class="container">
     {{partial "nav-bar.html" }}
-    <section class="content">
-        {{if not .IsHome }}<h3>{{ .Title }}</h3>{{end}}
+    <div class="content list">
         {{ .Content }}
         {{ range .Data.Pages }}
-        <div class="entry blog"><a href="{{ .Permalink }}">{{ .Title }}</a>
-            {{ if .Params.LatestVersion }} &middot; <small>({{.Params.LatestVersion}})</small>{{end}}
-            &middot; {{if .Params.Language}}{{.Params.Language}}
-            &middot; {{end}}{{ .Date.Format "2006" }}
+        <a class="entry" href="{{ .Permalink }}">
+            <h4>{{.Title}}</h4>
+            {{ if .Params.LatestVersion }}<small>({{.Params.LatestVersion}})</small>{{end}}
+            <small>{{if .Params.Language}}{{.Params.Language}}</small>
+            {{end}}
             <div class="meta">
                 {{if .Params.Description}}<p>{{.Params.Description}}</p>{{end}}
             </div>
-        </div>
+        </a>
         {{end}}
-    </section>
+    </div>
+    {{ partial "footer.html" . }}
+
 </div>
-{{ partial "footer.html" . }}

@@ -1,12 +1,13 @@
 <footer>
     <div class="overline"></div>
-    {{if $.GitInfo}}<p class="small">Current page revision:
+    {{if $.GitInfo}}
+    <small>Current page revision:
         <a href="https://github.com/saleh-lootah/portfolio/commit/{{$.GitInfo.Hash}}#content/{{$.File.Path}}">{{
             $.GitInfo.AbbreviatedHash }}</a>
-    </p>{{end}}
-    <p class="small">The content of this site is CC BY-SA 4.0. The code of this site
-        is BSD 2-Clause.</p>
-    <p class="small"><a href="#">View license file</a></p>
+    </small>{{end}}
+    <small>The content of this site is CC BY-SA 4.0. The code of this site
+        is BSD 2-Clause.</small>
+    <small><a href="#">View license file</a></small>
 </footer>
 </body>
 
