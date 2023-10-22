@@ -7,8 +7,10 @@ ___
 
 ## About me
 
-I like to build and code. In the past I have delved into photography, tried my hand at metal fabrication and a tiny bit of wood working. As of late, my main focus has been the web.
+I am a designer who likes to build and code. In the past I have delved into photography and photo editing, tried my hand at metal fabrication and a tiny bit of wood working. As of late, my main focus has been the web.
 
-I obsesses over the intricacies of visual design, interaction design and code, and while I embrace the fact that these factors hold significant weight in dictating the overall quality of the final design, I know that successful designs encompass much more than that. Successful designs are the result of well managed cross-discipline collaboration, where the less tangible aspects of the design process really come to light. I have come to appreciate the importance of diagramming and writing as crucial building blocks of the design process.
+My journey commenced with an innate passion for design. This evolved into a sophisticated understanding of UI/UX, especially during my transformative time at university. I obsess over the intricacies of visual design, interaction design and the code that makes it all come to life. I strive to develop high quality products that solve problems.
 
-You can contact me on [LinkedIn](https://www.linkedin.com/in/saleh-lootah/) or [email](saleh.lootah3@gmail.com).
+I graduated from the University of Exeter with a Bachelors of Science in Computer Science. I have since moved back to my home country and have been working at Digital Dubai as a UI/UX designer where I started building the foundations of what is to be a city-wide digital design system.
+
+If you're interested in working with me, feel free to contact me on [LinkedIn](https://www.linkedin.com/in/saleh-lootah/) or [Email](mailto:saleh.lootah3@gmail.com).

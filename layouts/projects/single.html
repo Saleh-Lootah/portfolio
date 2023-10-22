@@ -2,10 +2,12 @@
 <div class="container">
     {{ partial "nav-bar.html" .}}
     <div class="content">
-        <h4><a class="breadcrumb" href="/projects">Projects</a></span> &#47; {{ .Title }}</h4>
-        <section>
+        <article>
+            <h4><span class="breadcrumb"><a href="/blog">Blogs</a></span> &#47;
+                {{ .Title }}</h4>
+            <p>{{ dateFormat "Jan 2, 2006" .Params.date }} &middot; {{.ReadingTime}} min read</p>
             {{.Content}}
-        </section>
+        </article>
     </div>
     {{ partial "footer.html" . }}
 </div>
