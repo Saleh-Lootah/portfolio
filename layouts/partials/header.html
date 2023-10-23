@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="{{ .Title }}">
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Saleh Lootah's Portfolio Website.{{ end }}">
+  <meta name="title" content="{{if .Title}}{{ .Title }} - {{end}}Saleh Lootah">
+  <meta name="description"
+    content="{{ with .Description }}{{ . }}{{ else }}Saleh Lootah's Personal Portfolio Website.{{ end }}">
 
   <link rel="icon" href="/favicon.svg">
   {{ $style := resources.Get "css/main.css"}}
