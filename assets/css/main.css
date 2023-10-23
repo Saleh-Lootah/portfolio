@@ -174,25 +174,40 @@ a {
   padding: 0.15rem;
 }
 
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+nav {
+  position: relative;
+  overflow: hidden;
 }
 
-.nav-links a {
+nav a {
   color: var(--primary);
   text-decoration: none;
+  z-index: 2;
 }
 
-.nav-links a:hover {
+nav a:hover {
   background-color: var(--state-primary-hover);
   color: var(--on-state-primary-hover);
 }
 
-.nav-links a:active {
+nav a:active {
   background-color: var(--state-primary-active);
   color: var(--on-state-primary-active);
+}
+
+nav svg {
+  fill: var(--state-primary-default);
+}
+
+nav svg:active {
+  fill: var(--state-primary-active);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 a.breadcrumb {
@@ -324,8 +339,6 @@ small {
   background: var(--surface-frosted-glass);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  height: 4.5rem;
-  left: 0;
 }
 
 /* Default styles (Mobile First) */
@@ -486,7 +499,6 @@ svg .fill {
   align-items: center;
   overflow: hidden;
   text-overflow: ellipsis;
-
 }
 
 .entry .one-liner {
@@ -511,7 +523,10 @@ svg .fill {
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
-    /* Bootstrap's default container width for SM */
+  }
+
+  nav {
+    justify-content: space-between;
   }
 }
 
@@ -523,9 +538,11 @@ svg .fill {
 
   .container {
     max-width: 720px;
-    /* Bootstrap's default container width for MD */
   }
 
+  #menu-anchor {
+    display: none;
+  }
 }
 
 /* LG devices (desktops, 992px and up) */
@@ -540,8 +557,9 @@ svg .fill {
 
   .container {
     max-width: 872px;
-    /* Bootstrap's default container width for LG */
   }
+
+
 }
 
 /* XL devices (desktops, 1200px and up) */
