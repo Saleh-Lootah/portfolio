@@ -7,8 +7,8 @@
   <meta name="title" content="{{if .Title}}{{ .Title }} - {{end}}Saleh Lootah">
   <meta name="description"
     content="{{ with .Description }}{{ . }}{{ else }}Saleh Lootah's Personal Portfolio Website.{{ end }}">
-
-  <link rel="icon" href="/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.webp" sizes="32x32">
   {{ $style := resources.Get "css/main.css"}}
   {{ $css := $style | resources.Minify }}
   <link rel="stylesheet" href="{{ $css.Permalink }}">
