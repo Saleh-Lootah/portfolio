@@ -207,7 +207,6 @@ nav svg:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 a.breadcrumb {
@@ -380,6 +379,7 @@ footer .overline {
 }
 
 .logo {
+  display: none;
   cursor: pointer;
 }
 
@@ -469,6 +469,7 @@ svg .fill {
 }
 
 .chillin {
+  display: none;
   position: absolute;
   right: 1rem;
   max-width: 57px;
@@ -524,14 +525,18 @@ svg .fill {
   .container {
     max-width: 540px;
   }
-
-  nav {
-    justify-content: space-between;
-  }
 }
 
 /* MD devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .logo {
+    display: block;
+  }
+
+  .chillin {
+    display: block;
+  }
+
   h1.xxl {
     font-size: 6rem;
   }
@@ -540,9 +545,6 @@ svg .fill {
     max-width: 720px;
   }
 
-  #menu-anchor {
-    display: none;
-  }
 }
 
 /* LG devices (desktops, 992px and up) */
@@ -558,7 +560,6 @@ svg .fill {
   .container {
     max-width: 872px;
   }
-
 
 }
 
