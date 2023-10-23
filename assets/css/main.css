@@ -539,6 +539,7 @@ svg .fill {
 
   h1.xxl {
     font-size: 6rem;
+    letter-spacing: -4px;
   }
 
   .container {
@@ -567,7 +568,6 @@ svg .fill {
 @media (min-width: 1200px) {
   h1.xxl {
     font-size: 8rem;
-    letter-spacing: -4px;
   }
 }
 
