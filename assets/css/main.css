@@ -209,11 +209,6 @@ nav svg:active {
   align-items: center;
 }
 
-a.breadcrumb {
-  color: var(--highlight-300);
-  text-decoration: none;
-}
-
 ul,
 ol {
   margin-top: 1em;
@@ -236,7 +231,7 @@ li {
 /* More legible typography for code */
 code,
 pre {
-  font-family: monospace;
+  font-family: "FreeMono", monospace;
   font-size: 1em;
 }
 
@@ -271,15 +266,11 @@ h6 {
   font-family: var(--font-fallback);
   line-height: var(--line-height-heading);
   letter-spacing: var(--letter-spacing-heading);
+  margin-bottom: 1rem;
 }
 
-article h1,
-article h2,
-article h3,
-article h4,
-article h5,
-article h6 {
-  margin-bottom: 1rem;
+p{
+  line-height: 200%;
 }
 
 h1.xxl {
@@ -310,16 +301,6 @@ h5 {
 
 h6 {
   font-size: 1rem;
-}
-
-/* Paragraph Styles */
-p {
-  font-family: var(--font-fallback);
-  line-height: var(--line-height-paragraph);
-  margin-top: var(--paragraph-spacing);
-  text-indent: var(--paragraph-indent);
-  text-transform: var(--text-case);
-  text-decoration: var(--text-decoration);
 }
 
 small {
@@ -492,6 +473,10 @@ svg .fill {
   transition: 200ms;
   color: var(--primary);
   text-decoration: none;
+}
+
+.entry h5{
+  margin: 0;
 }
 
 .entry .title {
