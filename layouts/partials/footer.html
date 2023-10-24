@@ -1,15 +1,16 @@
 <footer>
     <div class="overline"></div>
-    {{if $.GitInfo}}
-    <small>Current page revision:
+    <small>
+        {{if $.GitInfo}}
+        Current page revision:
         <a href="https://github.com/saleh-lootah/portfolio/commit/{{$.GitInfo.Hash}}#content/{{$.File.Path}}">{{
             $.GitInfo.AbbreviatedHash }}</a>
-    </small>{{end}}
-    <small>The content of this site is
+        {{end}} <br>
+        The content of this site is
         <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank"
             rel="license noopener noreferrer" style="display:inline-block;">
-            CC BY-NC-ND 4.0.</a>
-        The code of this site is <a href="https://spdx.org/licenses/BSD-2-Clause.html">BSD 2-Clause</a><a
+            CC BY-NC-ND 4.0</a><br>
+        The code of this site is <a href="https://spdx.org/licenses/BSD-2-Clause.html">BSD 2-Clause</a><br><a
             href="https://github.com/saleh-lootah/portfolio/blob/main/LICENSE.md">View license</a>
     </small>
 </footer>
