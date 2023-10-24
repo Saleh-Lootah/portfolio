@@ -6,10 +6,8 @@
 }
 
 @font-face {
-  font-family: 'FreeMono';
-  src: url('/fonts/FreeMono.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'SpaceMono';
+  src: url('/fonts/SpaceMono.woff2') format('woff2');
 }
 
 :root {
@@ -151,7 +149,7 @@ html {
 
 /* Set base font settings */
 body {
-  font-family: 'FreeSans', 'FreeMono', 'SF Pro', monospace;
+  font-family: 'FreeSans', 'SpaceMono', 'SF Pro', monospace;
   font-weight: normal;
   font-style: normal;
   background: var(--surface-level-1);
