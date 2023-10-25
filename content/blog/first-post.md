@@ -1,7 +1,7 @@
 ---
 title: My First Post
 date: 2023-10-22
-description: "This is a sample"
+description: "Hello World, Welcome to my new website"
 url: /hello-friend
 aliases:
   - "/projects/example"
