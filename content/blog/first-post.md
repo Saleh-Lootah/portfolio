@@ -8,7 +8,7 @@ aliases:
 ---
 ### Hello World
 
-Welcome to my new website, at the moment of it’s publishing it includes a home page, a sparse projects page, a blog page with one post, an empty gallery and a [now page](https://nownownow.com/about). One would think that I’d gather some content before publishing it but I have been [bullied](https://saleh.boo/) to make it and publish it asap. Thank you [Humaid].
+Welcome to my new website, at the moment of it’s publishing it includes a home page, a sparse projects page, a blog page with one post, an empty gallery and a [now page](https://nownownow.com/about). One would think that I’d gather some content before publishing it but I have been [bullied](https://saleh.boo/) to publish it asap. Thank you [Humaid].
 
 This website is built using the static website generator [Hugo], heavily inspired by the incredibly lightweight [huma.id] website. While mine does not come anywhere close to how lightweight and optimized [huma.id] is, it's still under 500kb.
 

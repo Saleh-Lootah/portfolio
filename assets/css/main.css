@@ -149,7 +149,7 @@ html {
 
 /* Set base font settings */
 body {
-  font-family: 'FreeSans', 'SpaceMono', 'SF Pro', monospace;
+  font-family: 'FreeSans', 'SpaceMono', 'SF Pro', Sans-serif;
   font-weight: normal;
   font-style: normal;
   background: var(--surface-level-1);
