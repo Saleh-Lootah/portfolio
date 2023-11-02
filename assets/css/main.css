@@ -310,7 +310,7 @@ small {
   border: none;
   height: 1px;
   background-color: var(--primary);
-  margin: 3.5rem auto;
+  margin: 1rem 0 3rem 0;
 }
 
 .frosted-glass {
@@ -367,13 +367,15 @@ footer .overline {
   align-items: center;
   line-height: 90%;
   user-select: none;
+  font-weight: 400;
+
 }
 
 .logo h6::before,
 .logo h6::after {
   content: '{';
   font-size: 3em;
-  font-weight: 400;
+  font-weight: 100;
   transform: translateY(-20%);
 }
 
@@ -418,14 +420,15 @@ nav {
 .no-content-found .message {
   display: flex;
   justify-content: center;
+  font-weight: 100;
 }
 
 .no-content-found .message::before,
 .no-content-found .message::after {
   content: '{';
   font-size: 3em;
-  font-weight: 400;
-  transform: translateY(10%);
+  font-weight: 100;
+  transform: translateY(25%);
 }
 
 .no-content-found .message::after {
@@ -520,6 +523,7 @@ svg .fill {
   h1.xxl {
     font-size: 6rem;
     letter-spacing: -4px;
+    margin: 2rem 0;
   }
 
   .container {
