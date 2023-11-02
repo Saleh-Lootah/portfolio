@@ -375,7 +375,6 @@ footer .overline {
   content: '{';
   font-size: 3em;
   font-weight: 100;
-  transform: translateY(-20%);
 }
 
 .logo h6::after {
@@ -427,7 +426,7 @@ nav {
   content: '{';
   font-size: 3em;
   font-weight: 100;
-  transform: translateY(25%);
+  transform: translateY(20%);
 }
 
 .no-content-found .message::after {
