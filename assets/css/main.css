@@ -229,7 +229,7 @@ li {
 /* More legible typography for code */
 code,
 pre {
-  font-family: "FreeMono", monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
@@ -272,7 +272,7 @@ p {
 }
 
 h1.xxl {
-  font-weight: var(--font-weight-regular);
+  font-weight: 100;
   font-size: 4.5rem;
   margin-top: 1rem;
 }
