@@ -274,7 +274,6 @@ p {
 h1.xxl {
   font-weight: 100;
   font-size: 4.5rem;
-  margin-top: 1rem;
 }
 
 h1 {
@@ -523,7 +522,7 @@ svg .fill {
   h1.xxl {
     font-size: 6rem;
     letter-spacing: -4px;
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
   .container {
