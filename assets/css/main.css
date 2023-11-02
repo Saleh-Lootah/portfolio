@@ -375,6 +375,7 @@ footer .overline {
   content: '{';
   font-size: 3em;
   font-weight: 100;
+  transform: translateY(-10%);
 }
 
 .logo h6::after {
