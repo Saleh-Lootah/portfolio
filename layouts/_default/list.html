@@ -1,19 +1,20 @@
 {{ partial "header.html" . }}
+{{partial "nav-bar.html" }}
+
 <div class="container">
-    {{partial "nav-bar.html" }}
     <div class="content">
         {{if not .IsHome }}<h3>{{ .Title }}</h3>
         {{ .Content }}
         {{ range .Data.Pages }}{{ end }}
         {{end}}
         {{if .IsHome}}
-        <main>
-            <h1 class="xxl">I'm Saleh,<br> a <span id="job-title">web developer</span> based in Dubai</h1>
-        </main>
         <article>
+            <main>
+                <h1>I'm Saleh,<br> a <span id="job-title">web developer</span> based in Dubai</h1>
+            </main>
             {{.Content}}
         </article>
         {{end}}
     </div>
-    {{ partial "footer.html" . }}
 </div>
+{{ partial "footer.html" . }}
