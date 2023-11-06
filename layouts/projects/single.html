@@ -1,13 +1,12 @@
 {{ partial "header.html" . }}
+{{ partial "nav-bar.html" .}}
 <div class="container">
-    {{ partial "nav-bar.html" .}}
-    <div class="content">
-        <article>
-            <h4><span class="breadcrumb"><a href="/blog">Blogs</a></span> &#47;
-                {{ .Title }}</h4>
-            <p>{{ dateFormat "Jan 2, 2006" .Params.date }} &middot; {{.ReadingTime}} min read</p>
-            {{.Content}}
-        </article>
+    <div class="title-bar">
+        <strong><small><a class="breadcrumb" href="/projects">Projects</span></a> &#47; {{ .Title }}</small></strong>
     </div>
-    {{ partial "footer.html" . }}
+    <article>
+        <p>{{ dateFormat "Jan 2, 2006" .Params.date }} &middot; {{.ReadingTime}} min read</p>
+        {{.Content}}
+    </article>
 </div>
+{{ partial "footer.html" . }}

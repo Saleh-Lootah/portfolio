@@ -1,46 +1,46 @@
 {{ partial "header.html" . }}
 {{partial "nav-bar.html" }}
 <div class="container">
-    <div class="content list">
-        {{ .Content }}
-        {{if .Data.Pages}}
-        {{ range .Data.Pages }}
-        <a class="entry" href="{{ .Permalink }}">
-            <div title="{{.Title}}" class="title">
-                <h5>{{.Title}}</h5>
-                {{ if .Params.LatestVersion }}
-                &middot;
-                <small>
-                    (v{{.Params.LatestVersion}})
-                </small>
-                {{end}}
-                {{if .Params.Language}}
-                &middot;
-                <small>
-                    {{.Params.Language}}
-                </small>
-                {{end}}
-                {{if .Date}}
-                &middot;
-                <small>
-                    {{.Date.Format "2006"}}
-                </small>
-                {{end}}
-            </div>
-            <div class="one-liner">
-                {{if .Params.Description}}
-                <p>
-                    {{.Params.Description}}
-                </p>
-                {{end}}
-            </div>
-        </a>
-        {{end}}
-        {{else}}
+    <div class="title-bar">
+        <strong><small>Projects</small></strong>
+    </div>
+    {{if .Data.Pages}}
+    {{ range .Data.Pages }}
+    <a class="card" href="{{ .Permalink }}">
+        <div>{{if .Params.Language}}
+            <small>
+                {{.Params.Language}}
+            </small>
+            {{end}}
+            {{ if .Params.LatestVersion }}
+            <small>
+                (v{{.Params.LatestVersion}})
+            </small>
+            {{end}}
+            {{if .Date}}
+            <small>
+                {{.Date.Format "2006"}}
+            </small>
+            {{end}}
+        </div>
+        <div title="{{.Title}}" class="title">
+            <h3>{{.Title}}</h3>
+        </div>
+        <div class="one-liner">
+            {{if .Params.Description}}
+            <p>
+                {{.Params.Description}}
+            </p>
+            {{end}}
+        </div>
+    </a>
+    {{end}}
+    {{else}}
+    <article>
         <div class="no-content-found">
             <h2 class="message">Under<br>Construction</h2>
         </div>
-        {{end}}
-    </div>
+    </article>
+    {{end}}
 </div>
 {{ partial "footer.html" . }}

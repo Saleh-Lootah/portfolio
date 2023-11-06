@@ -1,10 +1,8 @@
 {{ partial "header.html" . }}
+{{ partial "nav-bar.html" .}}
 <div class="container">
-  {{ partial "nav-bar.html" .}}
-  <div class="content">
-    <article>
-      {{.Content}}
-    </article>
-  </div>
+  <article>
+    {{.Content}}
+  </article>
 </div>
 {{ partial "footer.html" . }}

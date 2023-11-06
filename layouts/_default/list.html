@@ -3,9 +3,13 @@
     {{partial "nav-bar.html" }}
     <div class="container">
         <div class="content">
-            {{if not .IsHome }}<h3>{{ .Title }}</h3>
-            {{ .Content }}
-            {{ range .Data.Pages }}{{ end }}
+            {{if not .IsHome }}
+            <div class="title-bar">
+                <strong><small>{{.Title}}</small></strong>
+            </div>
+            <article>
+                {{ .Content }}
+            </article>
             {{end}}
             {{if .IsHome}}
             <article>
