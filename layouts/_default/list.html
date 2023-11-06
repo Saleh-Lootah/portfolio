@@ -1,20 +1,35 @@
 {{ partial "header.html" . }}
-{{partial "nav-bar.html" }}
-
-<div class="container">
-    <div class="content">
-        {{if not .IsHome }}<h3>{{ .Title }}</h3>
-        {{ .Content }}
-        {{ range .Data.Pages }}{{ end }}
-        {{end}}
-        {{if .IsHome}}
-        <article>
-            <main>
+<main style="position: relative;">
+    {{partial "nav-bar.html" }}
+    <div class="container">
+        <div class="content">
+            {{if not .IsHome }}<h3>{{ .Title }}</h3>
+            {{ .Content }}
+            {{ range .Data.Pages }}{{ end }}
+            {{end}}
+            {{if .IsHome}}
+            <article>
                 <h1>I'm Saleh,<br> a <span id="job-title">web developer</span> based in Dubai</h1>
-            </main>
-            {{.Content}}
-        </article>
-        {{end}}
+                {{.Content}}
+            </article>
+            <section id="latest" class="section">
+                <div class="columns">
+                    <a class="card" href="">
+                        <small>Blog Post</small>
+                        <h2>My First Blog Post</h2>
+                        <p>Welcome to my new website, at the moment of its publishing it includes a home page, a
+                            sparse
+                            projects page</p>
+                    </a>
+                    <a class="card" href="">
+                        <small>Placeholder</small>
+                        <h2>Placeholder</h2>
+                        <p>Placeholder</p>
+                    </a>
+                </div>
+            </section>
+            {{end}}
+        </div>
     </div>
-</div>
+</main>
 {{ partial "footer.html" . }}

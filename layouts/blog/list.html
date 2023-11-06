@@ -1,31 +1,31 @@
 {{ partial "header.html" . }}
+{{partial "nav-bar.html" }}
 <div class="container">
-    {{partial "nav-bar.html" }}
-    <div class="content list">
-        {{ .Content }}
+    <div class="list">
+        <div class="title-bar">
+            <strong><small>Blog</small></strong>
+        </div>
         {{if .Data.Pages}}
         {{ range .Data.Pages }}
-        <a class="entry" href="{{ .Permalink }}">
-            <div title="{{.Title}}" class="title">
-                <h5>{{.Title}}</h5>
-                {{ if .Params.LatestVersion }}
-                &middot;
-                <small>
-                    (v{{.Params.LatestVersion}})
-                </small>
-                {{end}}
-                {{if .Params.Language}}
-                &middot;
+        <a class="card" href="{{ .Permalink }}">
+            <div>{{if .Params.Language}}
                 <small>
                     {{.Params.Language}}
                 </small>
                 {{end}}
+                {{ if .Params.LatestVersion }}
+                <small>
+                    (v{{.Params.LatestVersion}})
+                </small>
+                {{end}}
                 {{if .Date}}
-                &middot;
                 <small>
                     {{.Date.Format "2006"}}
                 </small>
                 {{end}}
+            </div>
+            <div title="{{.Title}}" class="title">
+                <h3>{{.Title}}</h3>
             </div>
             <div class="one-liner">
                 {{if .Params.Description}}
@@ -42,5 +42,5 @@
         </div>
         {{end}}
     </div>
-    {{ partial "footer.html" . }}
 </div>
+{{ partial "footer.html" . }}

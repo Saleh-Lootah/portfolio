@@ -1,11 +1,11 @@
 {{ partial "header.html" . }}
+{{partial "nav-bar.html" }}
 <div class="container">
-    {{partial "nav-bar.html" }}
     <div class="content list">
         {{ .Content }}
         {{if .Data.Pages}}
         {{ range .Data.Pages }}
-        <a col-span="8" class="entry" href="{{ .Permalink }}">
+        <a class="entry" href="{{ .Permalink }}">
             <div title="{{.Title}}" class="title">
                 <h5>{{.Title}}</h5>
                 {{ if .Params.LatestVersion }}
@@ -42,5 +42,5 @@
         </div>
         {{end}}
     </div>
-    {{ partial "footer.html" . }}
 </div>
+{{ partial "footer.html" . }}
