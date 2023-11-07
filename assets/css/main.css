@@ -126,10 +126,11 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: normal;
   font-style: normal;
-  background: var(--surface-level-2);
+  background: var(--surface-level-3);
   color: var(--primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0 2rem;
 }
 
 small {
@@ -219,7 +220,7 @@ article p {
   border: 1px solid var(--primary);
   overflow: hidden;
   max-width: 1320px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .columns {
@@ -286,7 +287,6 @@ a.breadcrumb {
 
 .no-content-found {
   position: relative;
-  padding: 2rem;
   margin: auto;
   text-align: center;
 }
@@ -309,6 +309,10 @@ a.breadcrumb {
 @media (max-width: 768px) {
   html {
     font-size: 100%;
+  }
+
+  body {
+    padding: 0;
   }
 
   .logo {
