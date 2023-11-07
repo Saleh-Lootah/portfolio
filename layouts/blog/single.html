@@ -2,10 +2,7 @@
 {{ partial "nav-bar.html" .}}
 
 <div class="container">
-    <div class="title-bar">
-        <strong><small><a class="breadcrumb" href="/blog">Blog</span></a> &#47;
-                {{ .Title }}</small></strong>
-    </div>
+    {{ partial "title-bar.html" . }}
     <article>
         <p>{{ dateFormat "Jan 2, 2006" .Params.date }} &middot; {{.ReadingTime}} min read</p>
         {{.Content}}

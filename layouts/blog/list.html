@@ -2,26 +2,24 @@
 {{partial "nav-bar.html" }}
 <div class="container">
     <div class="list">
-        <div class="title-bar">
-            <strong><small>Blog</small></strong>
-        </div>
+        {{ partial "title-bar.html" . }}
         {{if .Data.Pages}}
         {{ range .Data.Pages }}
         <a class="card" href="{{ .Permalink }}">
             <div>{{if .Params.Language}}
-                <small>
+                <h6>
                     {{.Params.Language}}
-                </small>
+                </h6>
                 {{end}}
                 {{ if .Params.LatestVersion }}
-                <small>
+                <h6>
                     (v{{.Params.LatestVersion}})
-                </small>
+                </h6>
                 {{end}}
                 {{if .Date}}
-                <small>
+                <h6>
                     {{.Date.Format "2006"}}
-                </small>
+                </h6>
                 {{end}}
             </div>
             <div title="{{.Title}}" class="title">

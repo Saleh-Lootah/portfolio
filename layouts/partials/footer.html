@@ -1,48 +1,34 @@
 <footer>
-
     {{if $.GitInfo}}
     <small>
         Current page revision:
-        <a href="https://github.com/saleh-lootah/portfolio/commit/{{$.GitInfo.Hash}}#content/{{$.File.Path}}">{{
-            $.GitInfo.AbbreviatedHash }}</a>
+        <a href="https://github.com/saleh-lootah/portfolio/commit/{{$.GitInfo.Hash}}#content/{{$.File.Path}}">{{$.GitInfo.AbbreviatedHash
+            }}</a>
     </small>
     {{end}}
     <small>
         <a href="https://github.com/saleh-lootah/portfolio/blob/main/LICENSE.md">Copyright © 2023 Saleh Lootah</a>
     </small>
 </footer>
-</body>
-
 <script>
-    const canvas = document.getElementById("static");
+    // Function to update the attribute based on the color scheme
+    function updateColorScheme() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            // If the user has set their system to prefer light mode
+            document.body.setAttribute('light', '');
+        } else {
+            // If the user has set their system to prefer dark mode
+            document.body.removeAttribute('light');
+        }
+    }
 
-    if (canvas) {
-        const context = canvas.getContext("2d");
-        const { offsetHeight, offsetWidth } = canvas;
-        canvas.width = offsetWidth;
-        canvas.height = offsetHeight;
-        const pixelSize = 1;
+    // Call the function on initial load
+    updateColorScheme();
 
-        const idata = context.createImageData(offsetWidth, offsetHeight);
-        const buffer = new Uint32Array(idata.data.buffer);
+    // Add an event listener for when the system's color scheme changes
+    window.matchMedia('(prefers-color-scheme: light)').addListener(updateColorScheme);
 
-        function noise(context) {
-            let len = buffer.length - 1;
-            while (len--) {
-                buffer[len] = Math.random() < 0.5 ? 0 : -1 >> 0;
-            };
-            context.putImageData(idata, 0, 0);
-        };
-
-        // This method will generate static at the fastest possible render speed
-        (function loop() {
-            noise(context);
-            requestAnimationFrame(loop);
-        })();
-
-        // This method will generate static at a fixed interval
-        // setInterval(() => noise(context), 24); // in milliseconds
-    };
 </script>
+</body>
 
 </html>

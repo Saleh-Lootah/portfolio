@@ -2,22 +2,19 @@
 <main style="position: relative;">
     {{partial "nav-bar.html" }}
     <div class="container">
-        <div class="content">
-            {{if not .IsHome }}
-            <div class="title-bar">
-                <strong><small>{{.Title}}</small></strong>
-            </div>
-            <article>
-                {{ .Content }}
-            </article>
-            {{end}}
-            {{if .IsHome}}
-            <article>
-                <h1>I'm Saleh,<br> a <span id="job-title">web developer</span> based in Dubai</h1>
-                {{.Content}}
-            </article>
-            {{end}}
-        </div>
+        {{if not .IsHome }}
+        {{ partial "title-bar.html" . }}
+        <article>
+            {{ .Content }}
+        </article>
+        {{end}}
+        {{if .IsHome}}
+        <article>
+            <h1>I'm Saleh,<br> a <span id="job-title">web developer</span> based in Dubai</h1>
+            {{.Content}}
+        </article>
+        {{ partial "latest.html" . }}
+        {{end}}
     </div>
 </main>
 {{ partial "footer.html" . }}

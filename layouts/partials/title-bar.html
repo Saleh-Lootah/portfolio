@@ -1,0 +1,7 @@
+<div class="title-bar">
+    {{- $ancestors := where .Ancestors "Kind" "!=" "home" -}}
+    {{- range $ancestors.Reverse }}
+    <a class="breadcrumb ancestor" href="{{ .RelPermalink }}">{{ .Title }}</a> &#47;
+    {{- end }}
+    <a class="breadcrumb" href="{{ .RelPermalink }}">{{ .Title }}</a>
+</div>

@@ -1,9 +1,26 @@
+<div class="section-heading">
+    <h6>LATEST</h6>
+</div>
 <section id="latest" class="section">
     <div class="columns">
-        <a class="card" href="#">
-            <small>blog</small>
-            <h2>{{ .Title }}</h2>
-            <p>{{ .Summary | plainify | truncate 150 }}</p>
+        {{ $pages := where site.RegularPages "Section" "in" (slice "blog" "projects") }}
+        {{ $pageCount := len $pages }}
+        {{ $limit := cond (gt 3 $pageCount) $pageCount 3 }}
+
+        {{ range (first $limit $pages) }}
+        <a class="card" href="{{ .Permalink }}">
+            <h6>{{ .Type }}</h6>
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Summary | plainify | truncate 80 }}</p>
         </a>
+        {{ end }}
+
+        {{ if lt $pageCount 3 }}
+        {{ range seq (sub 3 $pageCount) }}
+        <div class="card" disabled>
+            <h6>Coming Soon</h6>
+        </div>
+        {{ end }}
+        {{ end }}
     </div>
 </section>
