@@ -37,7 +37,7 @@
   --on-primary-hover: var(--cream-950);
   --on-primary-active: var(--cream-200);
 
-  --h1: 5rem;
+  --h1: 4.5rem;
   --h2: 3rem;
   --h3: 2.5rem;
   --h4: 2rem;
@@ -276,13 +276,6 @@ article p {
   border-bottom: 1px solid var(--primary);
 }
 
-.card .one-liner {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 .frosted-glass {
   background: var(--surface-frosted-glass);
   -webkit-backdrop-filter: blur(12px);
@@ -350,6 +343,10 @@ a.breadcrumb.ancestor {
     padding: 0;
   }
 
+  article {
+    padding: 1.5rem;
+  }
+
   .logo {
     display: none;
   }
@@ -359,8 +356,9 @@ a.breadcrumb.ancestor {
   }
 
   .container {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
   }
+
 
   .columns {
     flex-direction: column;
