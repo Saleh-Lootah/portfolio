@@ -23,7 +23,7 @@ The website features an easy-to-use CMS through TinaCMS and prioritizes SEO with
 
 #### Challenges and Learning
 
-Throughout the project, I encountered various challenges, from selecting the appropriate technology stack to implementing the right CMS and optimizing for SEO. These challenges led to significant learning in web development, deepening my skills in frameworks like React, SolidJS, and Astro, as well as in serverless functions and form validation.
+Throughout the project, I encountered various challenges, from selecting the appropriate technology stack to implementing the right CMS and optimizing for SEO. These challenges led to significant learning in web development, deepening my skills in frameworks like React and Astro, as well as in serverless functions and form validation.
 
 #### Performance and Future Plans
 
