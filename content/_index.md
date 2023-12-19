@@ -5,7 +5,7 @@ menu: projects
 ---
 I like to build and code. In the past I have delved into photography, photo editing, tried my hand at metal fabrication and a tiny bit of wood working. As of late, my main focus has been the web.
 
-Stemming from an innate passion for design I obsess over the intricacies of visual design, interaction design and the code that makes it all come to life. I strive to develop high quality products that solve problems.
+Stemming from an innate passion for design, I obsess over the intricacies of visual design, interaction design and the code that makes it all come to life. I strive to develop high quality products that solve problems.
 
 I graduated from the University of Exeter with a Bachelors of Science in Computer Science. I have since moved back to my home country and have been working as a UI/UX designer building the foundations of what is to be a city-wide digital design system
 
