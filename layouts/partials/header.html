@@ -4,17 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="{{if .Title}}{{ .Title }} - {{end}}Saleh Lootah">
-  <meta name="description"
-    content="{{ with .Description }}{{ . }}{{ else }}Saleh Lootah's Personal Portfolio Website.{{ end }}">
-  <link rel="icon" type="image/webp" href="/favicon.webp" sizes="32x32">
+  <meta name="title" content="{{if .Title}}{{ .Title }} - Saleh Lootah |  Portfolio{{end}}">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Saleh Lootah's Portfolio Website.{{ end }}">
+  <meta name="keywords"
+    content="Saleh Lootah, Web Developer Dubai, Software Engineer UAE, Full Stack Development, Front-End Development Dubai, Back-End Development UAE, Responsive Web Design, JavaScript Developer Dubai, HTML5, CSS, React Developer UAE, Dubai Tech Portfolio, User Interface Design, Saleh Web Portfolio, Software Solutions Dubai, Mobile App Development Dubai, Technology Expert UAE">
+  <link rel="icon" type="image/webp" href="/favicon.webp" sizes="32x32" alt="Saleh Lootah's Logo">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="{{if .Title}}{{ .Title }} - Saleh Lootah |  Portfolio{{end}}">
+  <meta property="og:description"
+    content="{{ with .Description }}{{ . }}{{ else }}Saleh Lootah's Portfolio Website.{{ end }}">
+  <meta property="og:image" content="/images/chillin@2x.webp">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{if .Title}}{{ .Title }} - Saleh Lootah | Portfolio{{end}}">
+  <meta name="twitter:description"
+    content="{{ with .Description }}{{ . }}{{ else }}Saleh Lootah's Portfolio Website.{{ end }}">
+  <meta name="twitter:image" content="/images/chillin@2x.webp">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="{{ .Permalink }}">
+
   {{ $style := resources.Get "css/main.css"}}
   {{ $normalize := resources.Get "css/normalize.css"}}
   {{ $normalizedCss := $normalize | resources.Minify }}
   {{ $css := $style | resources.Minify }}
   <link rel="stylesheet" href="{{ $normalize.Permalink }}">
   <link rel="stylesheet" href="{{ $css.Permalink }}">
-  <title>{{if .Title}}{{ .Title }} - {{end}}Saleh Lootah</title>
+  <title>{{if .Title}}{{ .Title }} - Saleh Lootah | Portfolio{{end}}</title>
 </head>
 
 <body>
