@@ -7,4 +7,4 @@ url: /now
 *This is a [now page](https://nownownow.com/about), which is where I write a
 summary of what I am doing right now.*
 
-I am currently conscripted in the military and have been since Feburary of 2023, I am due to finish end of Jan 2024.
+I have successfully completed my year of military conscription, and have returned back to civilian life. I am currently working as a UI/UX Designer at Digital Dubai.
