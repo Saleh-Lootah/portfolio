@@ -130,8 +130,6 @@ h6 {
   font-size: var(--h6);
 }
 
-
-
 small {
   font-family: monospace;
   font-size: var(--small);
@@ -317,6 +315,24 @@ a.breadcrumb.ancestor {
   margin: auto;
   text-align: center;
   padding: 2rem;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.flex-left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 #static {
