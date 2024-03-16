@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+{{ partial "nav-bar.html" .}}
+<main class="container">
+  <!-- {{ partial "title-bar.html" . }} -->
+  {{ partial "article-head.html" . }}
+  <article>
+    {{ block "article" . }}
+    {{ end }}
+  </article>
+</main>
+{{ partial "footer.html" . }}

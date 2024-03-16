@@ -1,27 +1,18 @@
 {{ partial "header.html" . }}
-<main style="position: relative;">
-    {{partial "nav-bar.html" }}
-    <div class="container">
-        {{if not .IsHome }}
-        {{ partial "title-bar.html" . }}
-        <article>
-            <div class="flex-left">
-                <!-- Check if the .Lastmod variable has a value -->
-                {{ if .Lastmod }}
-                <!-- Display the last modification date in a readable format -->
-                <small>Last updated: {{ .Lastmod.Format "January 2, 2006" }}</small>
-                {{ end }}
-            </div>
-            {{ .Content }}
-        </article>
-        {{end}}
-        {{if .IsHome}}
-        <article>
-            <h1>I'm Saleh,<br> a <span id="job-title">web developer</span> based in Dubai</h1>
-            {{.Content}}
-        </article>
-        {{ partial "latest.html" . }}
-        {{end}}
-    </div>
+{{partial "nav-bar.html" }}
+<main class="container">
+    {{if not .IsHome }}
+    {{ partial "title-bar.html" . }}
+    <article>
+        {{ .Content }}
+    </article>
+    {{end}}
+    {{if .IsHome}}
+    <article class="hero">
+        <h1>I'm Saleh,<br> a <span id="job-title">web developer</span> based in Dubai</h1>
+        {{.Content}}
+    </article>
+    {{ partial "latest.html" . }}
+    {{end}}
 </main>
 {{ partial "footer.html" . }}

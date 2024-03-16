@@ -4,13 +4,13 @@ date: 2023-10-22
 description: "Hello World, Welcome to my new website"
 url: /hello-world
 ---
-#### Hello World
+## Hello World
 
 Welcome to my new website, at the moment of it’s publishing it includes a home page, a sparse projects page, a blog page with one post, an empty gallery and a [now page](https://nownownow.com/about). One would think that I’d gather some content before publishing it but I have been [motivated](https://saleh.boo/) to publish it asap. Thank you [Humaid].
 
 This website is built using the static website generator [Hugo], heavily inspired by the incredibly lightweight [huma.id] website. While mine does not come anywhere close to how lightweight and optimized [huma.id] is, it's still under ~~500kb~~ 26kb.
 
-#### The Future
+## The Future
 
 I hope to further refine and improve this page over time. One of the main reasons I have taken the time to build it is to encourage myself to start building publicly and deep dive into various topics of interest.
 

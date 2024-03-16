@@ -23,10 +23,10 @@
   --cream-900: #594435;
   --cream-950: #2F231B;
 
-  --surface-level-1: var(--cream-50);
-  --surface-level-2: var(--cream-100);
-  --surface-level-3: var(--cream-200);
-  --surface-frosted-glass: rgba(255 255 255 / 5%);
+  --base-1: var(--cream-50);
+  --base-2: var(--cream-100);
+  --base-3: var(--cream-200);
+  --base-frosted-glass: rgba(255 255 255 / 5%);
 
   --primary: var(--cream-950);
   --on-primary: var(--cream-200);
@@ -37,22 +37,22 @@
   --on-primary-hover: var(--cream-950);
   --on-primary-active: var(--cream-200);
 
-  --h1: 4.5rem;
-  --h2: 3rem;
-  --h3: 2.5rem;
-  --h4: 2rem;
-  --h5: 1.5rem;
+  --h1: 2.027rem;
+  --h2: 1.802rem;
+  --h3: 1.602rem;
+  --h4: 1.424rem;
+  --h5: 1.44rem;
   --h6: 0.8rem;
-  --small: 0.6rem;
+  --small: 0.8rem;
 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --surface-level-1: var(--gray-950);
-    --surface-level-2: var(--gray-900);
-    --surface-level-3: var(--gray-800);
-    --surface-frosted-glass: hsla(0, 0%, 9%, 0.50);
+    --base-1: var(--gray-950);
+    --base-2: var(--gray-900);
+    --base-3: var(--gray-800);
+    --base-frosted-glass: hsla(0, 0%, 9%, 0.50);
 
     --primary: var(--cream-200);
     --on-primary: var(--cream-950);
@@ -77,14 +77,14 @@
 }
 
 html {
-  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Cantarell, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Cantarell, sans-serif;
   font-size: 125%;
 }
 
 body {
   font-weight: normal;
   font-style: normal;
-  background: url(/images/texture.webp)repeat, var(--surface-level-2);
+  background: url(/images/texture.webp)repeat, var(--base-2);
   color: var(--primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -168,14 +168,33 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
+a:hover {
   background-color: var(--primary-hover);
   color: var(--on-primary-hover);
 }
 
-nav a:active {
+a:active {
   background-color: var(--primary-active);
   color: var(--on-primary-active);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.hero {
+  max-width: 872px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 4rem;
 }
 
 article {
@@ -190,11 +209,20 @@ article h3,
 article h4,
 article h5,
 article h6 {
-  margin: 0 0 1.25rem 0;
+  margin: 0.5em 0;
 }
 
 article p {
   line-height: 200%;
+}
+
+.article-head {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  color: var(--on-primary);
+  background-color: var(--primary);
 }
 
 .chillin {
@@ -204,17 +232,9 @@ article p {
   z-index: 2;
 }
 
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  gap: 1rem;
-}
-
 .container {
   position: relative;
-  background-color: var(--surface-level-1);
+  background-color: var(--base-1);
   border-radius: 1rem;
   border: 1px solid var(--primary);
   overflow: hidden;
@@ -252,11 +272,11 @@ article p {
 .card[disabled] {
   justify-content: center;
   align-items: center;
-  background-color: var(--surface-level-2);
+  background-color: var(--base-2);
 }
 
 .card[disabled]:hover {
-  background-color: var(--surface-level-2);
+  background-color: var(--base-2);
 
 }
 
@@ -277,7 +297,7 @@ article p {
 }
 
 .frosted-glass {
-  background: var(--surface-frosted-glass);
+  background: var(--base-frosted-glass);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
@@ -287,27 +307,34 @@ article p {
   gap: 0.5rem;
   align-items: center;
   background-color: var(--primary);
-  padding: 1rem 2rem;
+  padding: 1.5rem;
   height: 56px;
   color: var(--on-primary);
 }
 
 a.breadcrumb {
+  font-family: monospace;
   color: var(--on-primary);
   padding: 0;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: -1px;
   text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  /* Number of lines you want to display */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 a.breadcrumb:hover {
+  background: none;
   text-decoration: underline;
 }
 
 a.breadcrumb.ancestor {
   font-weight: 400;
-  color: var(--surface-level-3);
 }
 
 .no-content-found {
@@ -315,6 +342,10 @@ a.breadcrumb.ancestor {
   margin: auto;
   text-align: center;
   padding: 2rem;
+}
+
+.flex {
+  display: flex;
 }
 
 .flex-between {

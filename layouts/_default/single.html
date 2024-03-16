@@ -1,16 +1,3 @@
-{{ partial "header.html" . }}
-{{ partial "nav-bar.html" .}}
-<div class="container">
-  <article>
-    <div class="flex-left">
-      <p>{{ dateFormat "Jan 2, 2006" .Params.date }} &middot; {{.ReadingTime}} min read</p>
-      <!-- Check if the .Lastmod variable has a value -->
-      {{ if .Lastmod }}
-      <!-- Display the last modification date in a readable format -->
-      <small>Last updated: {{ .Lastmod.Format "January 2, 2006" }}</small>
-      {{ end }}
-    </div>
-    {{.Content}}
-  </article>
-</div>
-{{ partial "footer.html" . }}
+{{ define "article" }}
+{{ .Content }}
+{{ end }}

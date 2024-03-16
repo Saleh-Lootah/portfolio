@@ -1,0 +1,9 @@
+<div class="article-head">
+  {{ if .Parent }}
+  <a href="{{ .Parent.RelPermalink }}" class="breadcrumb">&#60; Go Back</a>
+  {{ else }}
+  <a href="/" class="breadcrumb">&#60; Go Home</a> <!-- Or any default location -->
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  <small>{{ dateFormat "Jan 2, 2006" .Params.date }} &middot; {{.ReadingTime}} min read</small>
+</div>
