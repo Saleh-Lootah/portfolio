@@ -32,4 +32,3 @@ The website has performed well in preliminary tests, indicating a promising user
 ## Conclusion
 
 This project was an invaluable experience, enhancing my skills and confidence in web development. For more information or to view the website, visit [Printing Talks](https://printingtalks.ae).
-
