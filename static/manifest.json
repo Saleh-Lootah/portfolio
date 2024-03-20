@@ -4,7 +4,6 @@
   "description": "Saleh Lootah's Website",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#F3F0E7",
   "icons": [
     {
       "src": "/icons/icon@1x.png",
