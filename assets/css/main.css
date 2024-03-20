@@ -26,7 +26,7 @@
   --base-1: var(--cream-50);
   --base-2: var(--cream-100);
   --base-3: var(--cream-200);
-  --base-frosted-glass: rgba(255 255 255 / 5%);
+  --base-frosted-glass: rgba(255 255 255 / 50%);
 
   --primary: var(--cream-950);
   --on-primary: var(--cream-200);
@@ -118,7 +118,7 @@ h4 {
   font-size: var(--h4)
 }
 
-x h5 {
+h5 {
   font-size: var(--h5)
 }
 
@@ -167,6 +167,42 @@ nav a {
   text-decoration: none;
 }
 
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.bottom-bar-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  z-index: 50;
+}
+
+#bottom-bar {
+  border-radius: 1rem;
+  z-index: 50;
+  backdrop-filter: blur(24px);
+  background-color: var(--base-frosted-glass);
+  box-sizing: border-box;
+}
+
+.bottom-bar-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 a:hover {
   background-color: var(--primary-hover);
   color: var(--on-primary-hover);
@@ -175,14 +211,6 @@ a:hover {
 a:active {
   background-color: var(--primary-active);
   color: var(--on-primary-active);
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  gap: 1rem;
 }
 
 .hero {
@@ -239,9 +267,10 @@ article p {
   overflow: hidden;
   max-width: 1320px;
   margin: 0 auto;
+  /* margin-top: 2rem; */
 }
 
-.columns {
+.latest-section {
   display: flex;
 }
 
@@ -347,30 +376,6 @@ a.breadcrumb.ancestor {
   display: flex;
 }
 
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.flex-right {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-
-.flex-left {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
-#static {
-  height: 56px;
-  width: 100%;
-  z-index: 2;
-}
-
 
 @media (max-width: 1408px) {}
 
@@ -404,10 +409,10 @@ a.breadcrumb.ancestor {
   }
 
   .container {
-    margin: 0 0.5rem;
+    margin: 0.5rem 0.5rem 0rem 0.5rem;
   }
 
-  .columns {
+  .latest-section {
     flex-direction: column;
   }
 

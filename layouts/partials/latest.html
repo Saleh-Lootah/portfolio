@@ -2,7 +2,7 @@
     <small>LATEST</small>
 </div>
 <section id="latest" class="section">
-    <div class="columns">
+    <div class="latest-section">
         {{ $pages := where site.RegularPages "Section" "in" (slice "blog" "projects") }}
         {{ $pageCount := len $pages }}
         {{ $limit := cond (gt 3 $pageCount) $pageCount 3 }}
