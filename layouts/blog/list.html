@@ -7,19 +7,19 @@
         {{ range .Data.Pages }}
         <a class="card" href="{{ .Permalink }}">
             <div>{{if .Params.Language}}
-                <h6>
+                <small>
                     {{.Params.Language}}
-                </h6>
+                </small>
                 {{end}}
                 {{ if .Params.LatestVersion }}
-                <h6>
+                <small>
                     (v{{.Params.LatestVersion}})
-                </h6>
+                </small>
                 {{end}}
                 {{if .Date}}
-                <h6>
+                <small>
                     {{.Date.Format "2006"}}
-                </h6>
+                </small>
                 {{end}}
             </div>
             <div title="{{.Title}}" class="title">
