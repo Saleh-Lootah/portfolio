@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="title" content="{{ if not .IsHome }}{{ .Title }} - {{ end }}Saleh Lootah">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Saleh Lootah's Portfolio Website.{{ end }}">
-  <meta name="keywords"
-    content="Saleh Lootah, Web Developer Dubai, Software Engineer UAE, Full Stack Development, Front-End Development Dubai, Back-End Development UAE, Responsive Web Design, JavaScript Developer Dubai, HTML5, CSS, React Developer UAE, Dubai Tech Portfolio, User Interface Design, Saleh Web Portfolio, Software Solutions Dubai, Mobile App Development Dubai, Technology Expert UAE">
+  <meta name="keywords" content="Saleh Lootah, Dubai">
   <link rel="icon" type="image/webp" href="/favicon.webp" sizes="32x32" alt="Saleh Lootah's Logo">
 
   <!-- Open Graph Tags -->
@@ -32,7 +31,14 @@
   {{ $css := $style | resources.Minify }}
   <link rel="stylesheet" href="{{ $normalize.Permalink }}">
   <link rel="stylesheet" href="{{ $css.Permalink }}">
-  <title>{{if .Title}}{{ .Title }} - Saleh Lootah {{end}}</title>
+  <title>
+    {{ if .IsHome }}
+    Saleh Lootah
+    {{ else }}
+    {{ .Title }} - Saleh Lootah
+    {{ end }}
+  </title>
+
 </head>
 
 <body>
