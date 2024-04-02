@@ -61,6 +61,10 @@
     --on-primary-hover: var(--cream-200);
     --on-primary-active: var(--cream-950);
   }
+
+  body {
+    background-color: var(--base-1);
+  }
 }
 
 /* Change the background color of the highlighted text and the color of the text itself */
@@ -84,6 +88,7 @@ body {
   font-weight: normal;
   font-style: normal;
   background: url(/images/texture.webp)repeat, var(--base-2);
+  background-color: var(--base-1);
   color: var(--primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
