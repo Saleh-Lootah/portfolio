@@ -83,7 +83,7 @@ html {
 body {
   font-weight: normal;
   font-style: normal;
-  background: url(/images/texture.webp)repeat, var(--base-2);
+  background: url(/images/texture.png)repeat, var(--base-2);
   background-color: var(--base-1);
   color: var(--primary);
   -webkit-font-smoothing: antialiased;
