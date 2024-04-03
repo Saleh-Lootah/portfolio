@@ -4,8 +4,6 @@
   "description": "Saleh Lootah's Website",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "black",
-  "theme": "black",
   "icons": [
     {
       "src": "/icons/apple-touch-icon.png",
