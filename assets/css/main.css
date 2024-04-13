@@ -291,6 +291,14 @@ article p {
   flex-basis: 0;
 }
 
+.card-heading {
+  font-size: 1.602rem;
+  font-weight: 600;
+  line-height: 90%;
+  letter-spacing: -1.5px;
+  margin: 0;
+}
+
 .card[disabled] {
   justify-content: center;
   align-items: center;
