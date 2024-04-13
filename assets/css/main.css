@@ -369,10 +369,6 @@ a.breadcrumb.ancestor {
   padding: 2rem;
 }
 
-.flex {
-  display: flex;
-}
-
 @media (max-width: 1408px) {}
 
 @media (max-width: 1216px) {}
