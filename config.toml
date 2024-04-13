@@ -6,8 +6,13 @@ copyright = "The content of this site is CC BY-SA 4.0. The code of this site is 
 enableGitInfo = true
 
 [Params]
-	name = "Saleh Lootah"
+	[Params.author]
+		email = 'contact@salehlootah.com'
+		name = 'Saleh Lootah'
 [minify]
 	minifyOutput = true
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
