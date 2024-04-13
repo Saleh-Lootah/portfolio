@@ -1,9 +1,13 @@
 baseURL = 'https://salehlootah.com/'
 languageCode = 'en-us'
 title = 'Saleh Lootah'
+copyright = "The content of this site is CC BY-SA 4.0. The code of this site is BSD 3-Clause."
+
 enableGitInfo = true
 
 [Params]
 	name = "Saleh Lootah"
 [minify]
 	minifyOutput = true
+[outputs]
+home = ["HTML", "RSS", "JSON"]
