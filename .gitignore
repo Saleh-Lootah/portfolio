@@ -10,3 +10,5 @@ Makefile
 feeds/
 static/sfeed.html
 *\~
+*.DS_Store
+.DS_Store

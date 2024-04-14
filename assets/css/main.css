@@ -81,7 +81,7 @@ html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Cantarell, sans-serif;
   font-size: 125%;
   background-color: var(--base);
-  background: url(/images/texture.png)repeat, var(--base);
+  background: url(/images/texture.png) repeat, var(--base);
   background-blend-mode: difference;
 }
 
