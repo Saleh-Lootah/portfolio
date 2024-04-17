@@ -14,13 +14,13 @@
   <!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css" /> -->
 
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="Saleh Lootah">
+  <meta property="og:title" content="{{ with .Title }}{{ . }}{{ else }}Saleh Lootah{{ end }}">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}Saleh Lootah's Website.{{ end }}">
   <meta property="og:image" content="/images/twitter-card.png">
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Saleh Lootah">
+  <meta name="twitter:title" content="{{ with .Title }}{{ . }}{{ else }}Saleh Lootah{{ end }}">
   <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}Saleh Lootah's Website.{{ end }}">
   <meta name="twitter:image" content="/images/twitter-card.png">
 
