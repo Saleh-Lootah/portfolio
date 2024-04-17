@@ -1,18 +1,23 @@
-<header class="">
+<header>
   <nav>
     <div alt="Logo" class="logo">
       <h5>saleh<br>lootah</h5>
     </div>
+    {{ $current := . }}
     <div class="nav-links">
-      <a href="/" title="Home">Home</a>
-      <a href="/projects" title="Projects">Projects</a>
-      <a href="/blog" title="Blog">Blog</a>
-      <!-- <a href="/gallery" title="Gallery">Gallery</a> -->
-      <a href="/now" title="Now">Now</a>
+      {{ range site.Menus.nav }}
+      {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+      {{ $active = or $active (eq .Name $current.Title) }}
+      {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
+      {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+      <a href="{{ .URL }}" {{ if $active }} class="selected" aria-current="page" {{ end }}>
+        {{ .Name }}
+      </a>
+      {{ end }}
     </div>
   </nav>
   <!-- <img title="me" class="chillin" src="/images/chillin@1x.webp" srcset='/images/chillin@1x.webp 1x,
     /images/chillin@2x.webp 2x, /images/chillin@3x.webp 3x,'
     alt="An image of the author of the website appearing to sit on the nav-bar bottom border"> -->
-  <div class="underline"></div>
+  <!-- <div class="underline"></div> -->
 </header>

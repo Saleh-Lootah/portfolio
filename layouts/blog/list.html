@@ -1,8 +1,8 @@
 {{ partial "header.html" . }}
-{{partial "nav-bar.html" }}
+{{partial "nav-bar.html" . }}
 <div class="container">
     <div class="list">
-        {{ partial "title-bar.html" . }}
+        <!-- {{ partial "title-bar.html" . }} -->
         {{if .Data.Pages}}
         {{ range .Data.Pages }}
         <a class="card" href="{{ .Permalink }}">

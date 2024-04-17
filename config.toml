@@ -16,3 +16,20 @@ enableGitInfo = true
   section = ['html', 'rss']
   taxonomy = ['html']
   term = ['html']
+[menu]
+  [[menu.nav]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 1
+  [[menu.nav]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 2
+  [[menu.nav]]
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 3
+  [[menu.nav]]
+    name = 'Now'
+    pageRef = '/now'
+    weight = 4
