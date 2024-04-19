@@ -27,7 +27,21 @@
 
     // Add an event listener for when the system's color scheme changes
     window.matchMedia('(prefers-color-scheme: light)').addListener(updateColorScheme);
+</script>
+{{ $grain := resources.Get "js/grained.min.js"}}
+<script src="{{ $grain.Permalink }}"></script>
+<script>
+    var options = {
+        animate: true,
+        patternWidth: 100,
+        patternHeight: 100,
+        grainOpacity: 0.05,
+        grainDensity: 1,
+        grainWidth: 1,
+        grainHeight: 1
+    };
 
+    grained("#grain", options);
 </script>
 </body>
 
