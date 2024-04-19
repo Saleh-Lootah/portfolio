@@ -95,7 +95,6 @@ body {
   color: var(--content);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0 2rem;
 }
 
 h1,
@@ -383,9 +382,8 @@ article p {
     font-size: 100%;
   }
 
-  body {
-    padding: 0;
-  }
+  /* body {} */
+  /* .container {} */
 
   article {
     padding: 1.5rem;
@@ -399,9 +397,7 @@ article p {
     display: none;
   }
 
-  .container {
-    margin: 0rem 0.75rem;
-  }
+
 
   .latest-section {
     flex-direction: column;
