@@ -214,7 +214,7 @@ article a {
 .hero {
   max-width: 872px;
   margin: auto;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .hero h1 {
@@ -302,7 +302,7 @@ article p {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1.5rem;
   gap: 1rem;
   text-decoration: none;
   transition: 0.2s;
@@ -367,11 +367,17 @@ article p {
   height: 1.5rem;
 }
 
-@media (max-width: 1408px) {}
+@media (max-width: 1408px) {
+  .container {
+    margin: 0 1rem;
+  }
+}
 
 @media (max-width: 1216px) {}
 
 @media (max-width: 1024px) {
+
+
   html {
     font-size: 110%;
   }
@@ -383,7 +389,6 @@ article p {
   }
 
   /* body {} */
-  /* .container {} */
 
   article {
     padding: 1.5rem;
