@@ -3,9 +3,45 @@
 <!-- {{partial "bottom-bar.html" }} -->
 <main class="container">
     {{if not .IsHome }}
-    <article>
-        {{ .Content }}
-    </article>
+    <div class="list">
+        <!-- {{ partial "title-bar.html" . }} -->
+        {{if .Data.Pages}}
+        {{ range .Data.Pages }}
+        <a class="card" href="{{ .Permalink }}">
+            <div>{{if .Params.Language}}
+                <small>
+                    {{.Params.Language}}
+                </small>
+                {{end}}
+                {{ if .Params.LatestVersion }}
+                <small>
+                    (v{{.Params.LatestVersion}})
+                </small>
+                {{end}}
+                {{if .Date}}
+                <small>
+                    {{.Date.Format "2006"}}
+                </small>
+                {{end}}
+            </div>
+            <div title="{{.Title}}" class="title">
+                <h3>{{.Title}}</h3>
+            </div>
+            <div class="one-liner">
+                {{if .Params.Description}}
+                <p>
+                    {{.Params.Description}}
+                </p>
+                {{end}}
+            </div>
+        </a>
+        {{end}}
+        {{else}}
+        <article>
+            {{ .Content }}
+        </article>
+        {{end}}
+    </div>
     {{end}}
     {{if .IsHome}}
     <!-- Display the current page URL -->

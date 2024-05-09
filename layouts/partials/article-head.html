@@ -1,5 +1,14 @@
 <div class="article-head">
-  <a class="backlink" href="{{ .Parent.RelPermalink }}"><small>&#60; Go Back</small></a>
+  {{ with .Parent }}
+  <a class="backlink" href="{{ .RelPermalink }}"><small>&#60; Go Back</small></a>
+  {{ end }}
   <h1>{{ .Title }}</h1>
-  <small>{{ dateFormat "Jan 2, 2006" .Params.date }} &middot; {{.ReadingTime}} min read</small>
+  <small>
+    {{ with .Params.date }}
+    {{ dateFormat "Jan 2, 2006" . }} &middot;
+    {{ end }}
+    {{ with .ReadingTime }}
+    {{ . }} min read
+    {{ end }}
+  </small>
 </div>

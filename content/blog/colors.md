@@ -4,11 +4,11 @@ date: 2024-04-08
 description: "New color taxonomy for salehlootah.com explained"
 url: /colors
 ---
-## What did I do?
+### What did I do?
 
 I just spent a significant amount of time re-thinking the taxonomy of the color system of this website. In the grand scheme of things this realistically is pointless because no one is going to know, nor is anyone else going to be working on my website, so clearer naming and more intuitive color classification is not really that important, but who gonna stop me?
 
-## Okay, why though?
+### Okay, why though?
 
 If you take a look at the the main style sheet before commit [4a514b8](https://github.com/saleh-lootah/portfolio/commit/4a514b8bb018c0497976f6b1b2a483aafea46647) you'll find that the colors were divided into 3 main categories: base, primary and on-primary
 
@@ -50,6 +50,6 @@ Given that one of my goals is to keep the website minimal as possible I cherry p
 
 The updated color taxonomy reduces the categories to 2: base and content. I removed the frosted glass variable and added variables for the focused state and for inversing base and content. While the variable count has increased due to the newly introduced states, the categorization has been simplified. Everything that's a background is base, everything that goes on top of a background is content, pretty simple.
 
-## Ok, Cool
+### Ok, Cool
 
 So yeah, a miniscule change that no one can really see nor which has a real impact on anything really, but I can sleep better now that I have cleaned it up and simplified it. Now I am probably going to face an issue with code block styling.

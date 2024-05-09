@@ -1,26 +1,28 @@
 <div class="section-heading">
     <small class="section-title">LATEST</small>
 </div>
-<section id="latest" class="section">
-    <div class="latest-section">
-        {{ $pages := where site.RegularPages "Section" "in" (slice "blog" "projects") }}
-        {{ $pageCount := len $pages }}
-        {{ $limit := cond (gt 3 $pageCount) $pageCount 3 }}
+<section id="latest" class="latest-section">
+    {{ $pages := where site.RegularPages "Section" "in" (slice "blog" "projects") }}
+    {{ $pageCount := len $pages }}
+    {{ $limit := cond (gt 3 $pageCount) $pageCount 3 }}
 
-        {{ range (first $limit $pages) }}
-        <a class="card" href="{{ .Permalink }}">
-            <small>{{ .Type }}</small>
-            <p class="card-heading">{{ .Title }}</p>
-            <p>{{ .Summary | plainify | truncate 80 }}</p>
-        </a>
+    {{ range (first $limit $pages) }}
+    <a class="card" href="{{ .Permalink }}">
+        <small>{{ .Type }}</small>
+        <p class="card-heading">{{ .Title }}</p>
+        {{ if isset .Params "description" }}
+        <p>{{ .Params.description | plainify | truncate 80 }}</p>
+        {{ else }}
+        <p>{{ .Summary | plainify | truncate 80 }}</p>
         {{ end }}
+    </a>
+    {{ end }}
 
-        {{ if lt $pageCount 3 }}
-        {{ range seq (sub 3 $pageCount) }}
-        <div class="card" disabled>
-            <small>Coming Soon</small>
-        </div>
-        {{ end }}
-        {{ end }}
+    {{ if lt $pageCount 3 }}
+    {{ range seq (sub 3 $pageCount) }}
+    <div class="card" disabled>
+        <small>Coming Soon</small>
     </div>
+    {{ end }}
+    {{ end }}
 </section>

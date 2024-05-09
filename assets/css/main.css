@@ -83,10 +83,11 @@
 
 html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Cantarell, sans-serif;
-  font-size: 125%;
+  /* font-size: 125%; */
   background-color: var(--base);
   background: url(/images/texture.png) repeat, var(--base);
   background-blend-mode: difference;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -141,13 +142,13 @@ small {
   font-size: var(--small);
 }
 
-header {
+/* header {
   position: relative;
   top: 0;
   max-width: 1320px;
   margin: auto;
   z-index: 2;
-}
+} */
 
 footer {
   display: flex;
@@ -162,6 +163,8 @@ nav {
   display: flex;
   align-items: center;
   padding: 1rem;
+  max-width: 1320px;
+  margin: auto;
 }
 
 nav a {
@@ -281,6 +284,7 @@ article p {
 
 .latest-section {
   display: flex;
+  /* border-bottom: 12px solid var(--content); */
 }
 
 .section-heading {
@@ -359,12 +363,65 @@ article p {
   position: relative;
   margin: auto;
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 #static {
   width: 100%;
   height: 1.5rem;
+}
+
+.gallery {
+  padding: 0 1rem;
+  gap: 1rem;
+  position: relative;
+  display: flex;
+  transition: 0.5s ease-in-out;
+  max-width: 1320px;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.photo-column {
+  position: relative;
+  width: 100%;
+  /* Adjust width as needed */
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  /* height: 300px; */
+  position: relative;
+  margin-top: 1.5rem;
+  z-index: 1;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+}
+
+.image:first-child {
+  margin-top: 0;
+  /* No overlap for the first image */
+}
+
+.gallery-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4.5rem;
+  z-index: 999;
+  position: -webkit-sticky;
+  position: sticky;
+  height: fit-content;
+}
+
+.solid-bg {
+  position: relative;
+  background-color: #424242;
+  border-radius: 1rem;
+  min-height: 20rem;
+  width: 100%;
+  height: 20rem;
 }
 
 @media (max-width: 1408px) {
@@ -388,8 +445,6 @@ article p {
     font-size: 100%;
   }
 
-  /* body {} */
-
   article {
     padding: 1.5rem;
   }
@@ -402,7 +457,9 @@ article p {
     display: none;
   }
 
-
+  .nav-links {
+    gap: 0.25rem;
+  }
 
   .latest-section {
     flex-direction: column;
@@ -411,5 +468,9 @@ article p {
   .card:not(:last-child) {
     border-right: 0;
     border-bottom: 1px solid var(--content);
+  }
+
+  .gallery-nav {
+    padding-top: 10vh;
   }
 }
