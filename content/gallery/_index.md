@@ -3,4 +3,4 @@ title: Gallery
 url: /gallery
 ---
 
-An Empty Gallery
+## Work in progress

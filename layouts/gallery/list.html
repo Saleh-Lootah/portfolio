@@ -1,54 +1,14 @@
 {{ partial "header.html" . }}
 {{ partial "nav-bar.html" .}}
-<section class="gallery">
+{{/* <section class="gallery">
   <div class="photo-column">
-    <img src="/images/twitter-card.png" class="image"></img>
-    <img src="/images/twitter-card.png" class="image "></img>
-    <img src="/images/twitter-card.png" class="image "></img>
-    <img src="/images/twitter-card.png" id="last" class="image "></img>
   </div>
   <aside class="gallery-nav">
-    <a href="" class="card">Hello</a>
-    <a href="" class="card">Hello</a>
-    <a href="" class="card">Hello</a>
-    <a href="" class="card">Hello</a>
-    <a href="#last" class="card">Hello</a>
   </aside>
-</section>
-
-<!-- <div>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, magnam culpa, repellat harum voluptatibus rem
-    eum voluptas aliquam modi cum incidunt temporibus odit doloremque, accusamus adipisci quaerat itaque unde
-    cupiditate.</p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, magnam culpa, repellat harum voluptatibus rem
-    eum voluptas aliquam modi cum incidunt temporibus odit doloremque, accusamus adipisci quaerat itaque unde
-    cupiditate.</p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, magnam culpa, repellat harum voluptatibus rem
-    eum voluptas aliquam modi cum incidunt temporibus odit doloremque, accusamus adipisci quaerat itaque unde
-    cupiditate.</p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, magnam culpa, repellat harum voluptatibus rem
-    eum voluptas aliquam modi cum incidunt temporibus odit doloremque, accusamus adipisci quaerat itaque unde
-    cupiditate.</p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, magnam culpa, repellat harum voluptatibus rem
-    eum voluptas aliquam modi cum incidunt temporibus odit doloremque, accusamus adipisci quaerat itaque unde
-    cupiditate.</p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, magnam culpa, repellat harum voluptatibus rem
-    eum voluptas aliquam modi cum incidunt temporibus odit doloremque, accusamus adipisci quaerat itaque unde
-    cupiditate.</p>
-</div> -->
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll('.photo-column .image');
-    let direction = 4; // Start with +2% (right) for the first image
-
-    images.forEach((img, index) => {
-      img.style.position = 'relative'; // Ensure that the image can be moved
-      img.style.left = `${direction}%`; // Apply the calculated offset
-      direction = -direction; // Reverse the direction for the next image (+2% becomes -2%, and vice versa)
-    });
-  });
-</script>
-
-
+</section> */}}
+<div class="container">
+  <article>
+    {{ .Content}}
+  </article>
+</div>
 {{ partial "footer.html" . }}

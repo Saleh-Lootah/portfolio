@@ -1,19 +1,17 @@
 <nav>
+  {{ $current := . }}
   <div alt="Logo" class="logo">
     <h5>saleh<br>lootah</h5>
   </div>
-  {{ $current := . }}
-  <div class="nav-links">
-    {{ range site.Menus.nav }}
-    {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
-    {{ $active = or $active (eq .Name $current.Title) }}
-    {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
-    {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
-    <a href="{{ .URL }}" {{ if $active }} class="selected" aria-current="page" {{ end }}>
-      {{ .Name }}
-    </a>
-    {{ end }}
-  </div>
+  {{ range site.Menus.nav }}
+  {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+  {{ $active = or $active (eq .Name $current.Title) }}
+  {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
+  {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+  <a href="{{ .URL }}" {{ if $active }} class="selected" aria-current="page" {{ end }}>
+    {{ .Name }}
+  </a>
+  {{ end }}
 </nav>
 <!-- <img title="me" class="chillin" src="/images/chillin@1x.webp" srcset='/images/chillin@1x.webp 1x,
     /images/chillin@2x.webp 2x, /images/chillin@3x.webp 3x,'

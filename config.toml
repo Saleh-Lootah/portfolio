@@ -22,17 +22,9 @@ enableGitInfo = true
     pageRef = '/'
     weight = 1
   [[menu.nav]]
-    name = 'Projects'
-    pageRef = '/projects'
-    weight = 2
-  [[menu.nav]]
     name = 'Blog'
     pageRef = '/blog'
     weight = 3
-  [[menu.nav]]
-    name = 'Gallery'
-    pageRef = '/gallery'
-    weight = 4
   [[menu.nav]]
     name = 'Now'
     pageRef = '/now'

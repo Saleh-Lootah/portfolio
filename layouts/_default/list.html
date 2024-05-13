@@ -8,7 +8,8 @@
         {{if .Data.Pages}}
         {{ range .Data.Pages }}
         <a class="card" href="{{ .Permalink }}">
-            <div>{{if .Params.Language}}
+            <div>
+                {{if .Params.Language}}
                 <small>
                     {{.Params.Language}}
                 </small>
