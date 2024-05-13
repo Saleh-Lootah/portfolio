@@ -328,6 +328,7 @@ article p {
   align-items: center;
   background-color: var(--base-disabled);
   color: var(--content-disabled);
+  min-height: 9.5rem;
 }
 
 .card[disabled]:hover {
@@ -442,7 +443,11 @@ article p {
   }
 
   article {
-    padding: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .hero {
+    padding: 1.25rem;
   }
 
   .logo {
