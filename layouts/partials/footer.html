@@ -1,34 +1,16 @@
 <footer>
-    {{if $.GitInfo}}
+    {{if $.GitInfo }}
     <small>
         Current page revision:
-        <a href="https://github.com/saleh-lootah/portfolio/commit/{{$.GitInfo.Hash}}#content/{{$.File.Path}}">{{$.GitInfo.AbbreviatedHash
-            }}</a>
+        <a href="https://github.com/saleh-lootah/portfolio/commit/{{$.GitInfo.Hash}}#content/{{$.File.Path}}">
+            {{ $.GitInfo.AbbreviatedHash }}
+        </a>
     </small>
     {{end}}
     <small>
         <a href="https://github.com/saleh-lootah/portfolio/blob/main/LICENSE.md">Copyright © 2023 Saleh Lootah</a>
     </small>
 </footer>
-<script>
-    // Function to update the attribute based on the color scheme
-    function updateColorScheme() {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-            // If the user has set their system to prefer light mode
-            document.body.setAttribute('light', '');
-        } else {
-            // If the user has set their system to prefer dark mode
-            document.body.removeAttribute('light');
-        }
-    }
-
-    // Call the function on initial load
-    updateColorScheme();
-
-    // Add an event listener for when the system's color scheme changes
-    window.matchMedia('(prefers-color-scheme: light)').addListener(updateColorScheme);
-
-</script>
 </body>
 
 </html>
