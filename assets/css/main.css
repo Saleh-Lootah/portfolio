@@ -39,7 +39,7 @@
   --content-hover: var(--cream-950);
   --content-active: var(--cream-950);
   --content-focused: var(--gray-950);
-  --content-disabled: var(--cream-400);
+  --content-disabled: var(--cream-700);
   --content-inverse: var(--cream-200);
 
 
@@ -70,10 +70,9 @@
     --content-hover: var(--cream-200);
     --content-active: var(--cream-300);
     --content-focused: var(--gray-950);
-    --content-disabled: var(--gray-400);
+    --content-disabled: var(--gray-300);
     --content-inverse: var(--cream-950);
-
-    --content-light: var(--cream-200);
+    --content-light: var(--cream-300);
   }
 }
 
@@ -174,51 +173,14 @@ footer {
   margin: auto;
 }
 
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  margin: auto;
-  gap: 1rem;
-  max-width: 1320px;
-}
-
-nav .logo {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-nav a {
-  text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: 600;
-  border-radius: 0.1rem;
-}
-
-nav a.selected {
-  background-color: var(--base-inverse);
-  color: var(--content-inverse);
-}
-
-nav a:visited {
-  color: var(--content)
-}
-
-nav a.selected:visited {
-  color: var(--content-inverse)
-}
-
 a {
   text-decoration: none;
   padding: 0.15rem;
   color: var(--content);
+}
+
+a:visited {
+  color: var(--content-light);
 }
 
 a:hover {
@@ -236,8 +198,51 @@ a:active {
   color: var(--content-active);
 }
 
-a:visited {
-  color: var(--content-light);
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  margin: auto;
+  gap: 1rem;
+  max-width: 1320px;
+}
+
+nav .logo {
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+  border-radius: 0.1rem;
+}
+
+nav a:visited {
+  color: var(--content);
+}
+
+nav a:focus {
+  background-color: var(--base-focused);
+  color: var(--content-focused);
+}
+
+nav a.selected:visited:focus {
+  background-color: var(--base-focused);
+  color: var(--content-focused);
+}
+
+nav a.selected {
+  background-color: var(--base-inverse);
+  color: var(--content-inverse);
 }
 
 article a {
@@ -470,8 +475,6 @@ pre {
 @media (max-width: 1216px) {}
 
 @media (max-width: 1024px) {
-
-
   html {
     font-size: 110%;
   }
