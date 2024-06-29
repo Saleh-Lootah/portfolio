@@ -42,7 +42,6 @@
   --content-disabled: var(--cream-700);
   --content-inverse: var(--cream-200);
 
-
   --h1: 2.027rem;
   --h2: 1.802rem;
   --h3: 1.602rem;
@@ -221,10 +220,15 @@ nav .logo {
 nav a {
   text-decoration: none;
   padding: 0.25rem 0.5rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
   font-weight: 600;
   border-radius: 0.1rem;
 }
+
+nav a:hover {
+  background-color: var(--base-hover);
+}
+
 
 nav a:visited {
   color: var(--content);
@@ -466,13 +470,11 @@ pre {
 }
 
 
-@media (max-width: 1408px) {
+@media (max-width: 1360px) {
   .container {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
   }
 }
-
-@media (max-width: 1216px) {}
 
 @media (max-width: 1024px) {
   html {
